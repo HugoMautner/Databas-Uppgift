@@ -77,9 +77,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SqliteDataAccess.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="Guardian.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="StudentModel.cs" />
+    <Compile Include="GuardianModel.cs" />
+    <Compile Include="PersonModel.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
