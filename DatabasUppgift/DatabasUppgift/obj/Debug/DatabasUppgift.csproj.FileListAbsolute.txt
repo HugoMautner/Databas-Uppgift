@@ -2,8 +2,9 @@ C:\Users\hugom\OneDrive\Dokument\GitHub\Databas-Uppgift\DatabasUppgift\DatabasUp
 C:\Users\hugom\OneDrive\Dokument\GitHub\Databas-Uppgift\DatabasUppgift\DatabasUppgift\bin\Debug\DatabasUppgift.exe
 C:\Users\hugom\OneDrive\Dokument\GitHub\Databas-Uppgift\DatabasUppgift\DatabasUppgift\bin\Debug\DatabasUppgift.pdb
 C:\Users\hugom\OneDrive\Dokument\GitHub\Databas-Uppgift\DatabasUppgift\DatabasUppgift\obj\Debug\DatabasUppgift.csprojAssemblyReference.cache
-C:\Users\hugom\OneDrive\Dokument\GitHub\Databas-Uppgift\DatabasUppgift\DatabasUppgift\obj\Debug\DatabasUppgift.Form1.resources
 C:\Users\hugom\OneDrive\Dokument\GitHub\Databas-Uppgift\DatabasUppgift\DatabasUppgift\obj\Debug\DatabasUppgift.Properties.Resources.resources
 C:\Users\hugom\OneDrive\Dokument\GitHub\Databas-Uppgift\DatabasUppgift\DatabasUppgift\obj\Debug\DatabasUppgift.csproj.GenerateResource.cache
 C:\Users\hugom\OneDrive\Dokument\GitHub\Databas-Uppgift\DatabasUppgift\DatabasUppgift\obj\Debug\DatabasUppgift.exe
 C:\Users\hugom\OneDrive\Dokument\GitHub\Databas-Uppgift\DatabasUppgift\DatabasUppgift\obj\Debug\DatabasUppgift.pdb
+C:\Users\hugom\OneDrive\Dokument\GitHub\Databas-Uppgift\DatabasUppgift\DatabasUppgift\obj\Debug\DatabasUppgift.Home.resources
+C:\Users\hugom\OneDrive\Dokument\GitHub\Databas-Uppgift\DatabasUppgift\DatabasUppgift\obj\Debug\DatabasUppgift.AddStudent.resources
