@@ -33,10 +33,11 @@
             this.btnChange = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAddStudent = new System.Windows.Forms.Button();
+            this.btnAddGuardian = new System.Windows.Forms.Button();
+            this.btnAddCourse = new System.Windows.Forms.Button();
+            this.btnAddTeacher = new System.Windows.Forms.Button();
+            this.pnlAddOptions = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -92,55 +93,64 @@
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAddStudent
             // 
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(396, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 64);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStudent.Location = new System.Drawing.Point(396, 207);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(228, 64);
+            this.btnAddStudent.TabIndex = 5;
+            this.btnAddStudent.Text = "Student";
+            this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
-            // button2
+            // btnAddGuardian
             // 
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(630, 207);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(228, 64);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAddGuardian.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddGuardian.Location = new System.Drawing.Point(630, 207);
+            this.btnAddGuardian.Name = "btnAddGuardian";
+            this.btnAddGuardian.Size = new System.Drawing.Size(228, 64);
+            this.btnAddGuardian.TabIndex = 6;
+            this.btnAddGuardian.Text = "Guardian";
+            this.btnAddGuardian.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnAddCourse
             // 
-            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(864, 207);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(228, 64);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Add";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAddCourse.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCourse.Location = new System.Drawing.Point(864, 207);
+            this.btnAddCourse.Name = "btnAddCourse";
+            this.btnAddCourse.Size = new System.Drawing.Size(228, 64);
+            this.btnAddCourse.TabIndex = 7;
+            this.btnAddCourse.Text = "Course";
+            this.btnAddCourse.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnAddTeacher
             // 
-            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1098, 207);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(228, 64);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAddTeacher.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTeacher.Location = new System.Drawing.Point(1098, 207);
+            this.btnAddTeacher.Name = "btnAddTeacher";
+            this.btnAddTeacher.Size = new System.Drawing.Size(228, 64);
+            this.btnAddTeacher.TabIndex = 8;
+            this.btnAddTeacher.Text = "Teacher";
+            this.btnAddTeacher.UseVisualStyleBackColor = true;
+            // 
+            // pnlAddOptions
+            // 
+            this.pnlAddOptions.Location = new System.Drawing.Point(396, 249);
+            this.pnlAddOptions.Name = "pnlAddOptions";
+            this.pnlAddOptions.Size = new System.Drawing.Size(930, 64);
+            this.pnlAddOptions.TabIndex = 9;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1419, 845);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pnlAddOptions);
+            this.Controls.Add(this.btnAddTeacher);
+            this.Controls.Add(this.btnAddCourse);
+            this.Controls.Add(this.btnAddGuardian);
+            this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnChange);
@@ -160,10 +170,11 @@
         private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAddStudent;
+        private System.Windows.Forms.Button btnAddGuardian;
+        private System.Windows.Forms.Button btnAddCourse;
+        private System.Windows.Forms.Button btnAddTeacher;
+        private System.Windows.Forms.Panel pnlAddOptions;
     }
 }
 

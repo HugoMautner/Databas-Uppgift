@@ -31,6 +31,8 @@
             this.Title = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.gBoxAddStudent = new System.Windows.Forms.GroupBox();
+            this.tBoxLastName = new System.Windows.Forms.TextBox();
+            this.lblLastName = new System.Windows.Forms.Label();
             this.tBoxEpost = new System.Windows.Forms.TextBox();
             this.lblEpost = new System.Windows.Forms.Label();
             this.tBoxTelenr = new System.Windows.Forms.TextBox();
@@ -40,8 +42,6 @@
             this.lblAdress = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.tBoxLastName = new System.Windows.Forms.TextBox();
-            this.lblLastName = new System.Windows.Forms.Label();
             this.gBoxAddStudent.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +86,22 @@
             this.gBoxAddStudent.TabIndex = 4;
             this.gBoxAddStudent.TabStop = false;
             this.gBoxAddStudent.Text = "Enter Student Details";
+            // 
+            // tBoxLastName
+            // 
+            this.tBoxLastName.Location = new System.Drawing.Point(106, 61);
+            this.tBoxLastName.Name = "tBoxLastName";
+            this.tBoxLastName.Size = new System.Drawing.Size(170, 20);
+            this.tBoxLastName.TabIndex = 9;
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Location = new System.Drawing.Point(6, 64);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(58, 13);
+            this.lblLastName.TabIndex = 8;
+            this.lblLastName.Text = "Last Name";
             // 
             // tBoxEpost
             // 
@@ -160,22 +176,6 @@
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
-            // 
-            // tBoxLastName
-            // 
-            this.tBoxLastName.Location = new System.Drawing.Point(106, 61);
-            this.tBoxLastName.Name = "tBoxLastName";
-            this.tBoxLastName.Size = new System.Drawing.Size(170, 20);
-            this.tBoxLastName.TabIndex = 9;
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(6, 64);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(58, 13);
-            this.lblLastName.TabIndex = 8;
-            this.lblLastName.Text = "Last Name";
             // 
             // AddStudent
             // 
