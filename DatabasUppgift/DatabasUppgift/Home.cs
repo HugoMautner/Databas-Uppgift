@@ -10,12 +10,17 @@ using System.Windows.Forms;
 
 namespace DatabasUppgift
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
         }
 
+        private void AppPerson_Click(object sender, EventArgs e)
+        {
+            AddStudent addStudent = new AddStudent();
+            addStudent.ShowDialog();
+        }
     }
 }
