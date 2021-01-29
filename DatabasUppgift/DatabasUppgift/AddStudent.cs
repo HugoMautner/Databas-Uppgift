@@ -25,14 +25,18 @@ namespace DatabasUppgift
 
         private void BtnSubmit_Click(object sender, EventArgs e)
         {
-            string name = textBoxName.Text;
+            string firstName = tBoxFirstName.Text;
+            string lastName = tBoxLastName.Text;
+            string adress = tBoxAdress.Text;
+            string teleNr = tBoxTelenr.Text;
+            string epost = tBoxEpost.Text;
 
-            //Student student = new Student();
+            //Student student = new Student(firstName, lastName, adress, teleNr, epost, 1);
 
 
             Home home = new Home();
             this.Close();
-
         }
+
     }
 }

@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             this.Title = new System.Windows.Forms.TextBox();
-            this.BtnClose = new System.Windows.Forms.Button();
-            this.GboxAddStudent = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BtnSubmit = new System.Windows.Forms.Button();
-            this.GboxAddStudent.SuspendLayout();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.gBoxAddStudent = new System.Windows.Forms.GroupBox();
+            this.tBoxEpost = new System.Windows.Forms.TextBox();
+            this.lblEpost = new System.Windows.Forms.Label();
+            this.tBoxTelenr = new System.Windows.Forms.TextBox();
+            this.tBoxAdress = new System.Windows.Forms.TextBox();
+            this.tBoxFirstName = new System.Windows.Forms.TextBox();
+            this.lblTelenr = new System.Windows.Forms.Label();
+            this.lblAdress = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.tBoxLastName = new System.Windows.Forms.TextBox();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.gBoxAddStudent.SuspendLayout();
             this.SuspendLayout();
             // 
             // Title
@@ -53,103 +57,139 @@
             this.Title.Text = "Softschool";
             this.Title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // BtnClose
+            // btnClose
             // 
-            this.BtnClose.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnClose.Location = new System.Drawing.Point(559, 652);
-            this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(228, 64);
-            this.BtnClose.TabIndex = 3;
-            this.BtnClose.Text = "Close";
-            this.BtnClose.UseVisualStyleBackColor = true;
-            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            this.btnClose.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(559, 652);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(228, 64);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // GboxAddStudent
+            // gBoxAddStudent
             // 
-            this.GboxAddStudent.Controls.Add(this.textBox3);
-            this.GboxAddStudent.Controls.Add(this.textBox2);
-            this.GboxAddStudent.Controls.Add(this.textBoxName);
-            this.GboxAddStudent.Controls.Add(this.label3);
-            this.GboxAddStudent.Controls.Add(this.label2);
-            this.GboxAddStudent.Controls.Add(this.label1);
-            this.GboxAddStudent.Location = new System.Drawing.Point(532, 271);
-            this.GboxAddStudent.Name = "GboxAddStudent";
-            this.GboxAddStudent.Size = new System.Drawing.Size(282, 126);
-            this.GboxAddStudent.TabIndex = 4;
-            this.GboxAddStudent.TabStop = false;
-            this.GboxAddStudent.Text = "Enter Student Details";
+            this.gBoxAddStudent.Controls.Add(this.tBoxLastName);
+            this.gBoxAddStudent.Controls.Add(this.lblLastName);
+            this.gBoxAddStudent.Controls.Add(this.tBoxEpost);
+            this.gBoxAddStudent.Controls.Add(this.lblEpost);
+            this.gBoxAddStudent.Controls.Add(this.tBoxTelenr);
+            this.gBoxAddStudent.Controls.Add(this.tBoxAdress);
+            this.gBoxAddStudent.Controls.Add(this.tBoxFirstName);
+            this.gBoxAddStudent.Controls.Add(this.lblTelenr);
+            this.gBoxAddStudent.Controls.Add(this.lblAdress);
+            this.gBoxAddStudent.Controls.Add(this.lblFirstName);
+            this.gBoxAddStudent.Location = new System.Drawing.Point(532, 271);
+            this.gBoxAddStudent.Name = "gBoxAddStudent";
+            this.gBoxAddStudent.Size = new System.Drawing.Size(282, 179);
+            this.gBoxAddStudent.TabIndex = 4;
+            this.gBoxAddStudent.TabStop = false;
+            this.gBoxAddStudent.Text = "Enter Student Details";
             // 
-            // textBox3
+            // tBoxEpost
             // 
-            this.textBox3.Location = new System.Drawing.Point(86, 86);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(170, 20);
-            this.textBox3.TabIndex = 5;
+            this.tBoxEpost.Location = new System.Drawing.Point(106, 153);
+            this.tBoxEpost.Name = "tBoxEpost";
+            this.tBoxEpost.Size = new System.Drawing.Size(170, 20);
+            this.tBoxEpost.TabIndex = 7;
             // 
-            // textBox2
+            // lblEpost
             // 
-            this.textBox2.Location = new System.Drawing.Point(86, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 20);
-            this.textBox2.TabIndex = 4;
+            this.lblEpost.AutoSize = true;
+            this.lblEpost.Location = new System.Drawing.Point(6, 156);
+            this.lblEpost.Name = "lblEpost";
+            this.lblEpost.Size = new System.Drawing.Size(37, 13);
+            this.lblEpost.TabIndex = 6;
+            this.lblEpost.Text = "E-post";
             // 
-            // textBoxName
+            // tBoxTelenr
             // 
-            this.textBoxName.Location = new System.Drawing.Point(86, 30);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(170, 20);
-            this.textBoxName.TabIndex = 3;
+            this.tBoxTelenr.Location = new System.Drawing.Point(106, 123);
+            this.tBoxTelenr.Name = "tBoxTelenr";
+            this.tBoxTelenr.Size = new System.Drawing.Size(170, 20);
+            this.tBoxTelenr.TabIndex = 5;
             // 
-            // label3
+            // tBoxAdress
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.tBoxAdress.Location = new System.Drawing.Point(106, 93);
+            this.tBoxAdress.Name = "tBoxAdress";
+            this.tBoxAdress.Size = new System.Drawing.Size(170, 20);
+            this.tBoxAdress.TabIndex = 4;
             // 
-            // label2
+            // tBoxFirstName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.tBoxFirstName.Location = new System.Drawing.Point(106, 30);
+            this.tBoxFirstName.Name = "tBoxFirstName";
+            this.tBoxFirstName.Size = new System.Drawing.Size(170, 20);
+            this.tBoxFirstName.TabIndex = 3;
             // 
-            // label1
+            // lblTelenr
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
+            this.lblTelenr.AutoSize = true;
+            this.lblTelenr.Location = new System.Drawing.Point(6, 126);
+            this.lblTelenr.Name = "lblTelenr";
+            this.lblTelenr.Size = new System.Drawing.Size(80, 13);
+            this.lblTelenr.TabIndex = 2;
+            this.lblTelenr.Text = "Telefonnummer";
             // 
-            // BtnSubmit
+            // lblAdress
             // 
-            this.BtnSubmit.Location = new System.Drawing.Point(739, 456);
-            this.BtnSubmit.Name = "BtnSubmit";
-            this.BtnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.BtnSubmit.TabIndex = 5;
-            this.BtnSubmit.Text = "Submit";
-            this.BtnSubmit.UseVisualStyleBackColor = true;
-            this.BtnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
+            this.lblAdress.AutoSize = true;
+            this.lblAdress.Location = new System.Drawing.Point(6, 96);
+            this.lblAdress.Name = "lblAdress";
+            this.lblAdress.Size = new System.Drawing.Size(39, 13);
+            this.lblAdress.TabIndex = 1;
+            this.lblAdress.Text = "Adress";
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Location = new System.Drawing.Point(6, 33);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(57, 13);
+            this.lblFirstName.TabIndex = 0;
+            this.lblFirstName.Text = "First Name";
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(739, 456);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 5;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
+            // 
+            // tBoxLastName
+            // 
+            this.tBoxLastName.Location = new System.Drawing.Point(106, 61);
+            this.tBoxLastName.Name = "tBoxLastName";
+            this.tBoxLastName.Size = new System.Drawing.Size(170, 20);
+            this.tBoxLastName.TabIndex = 9;
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Location = new System.Drawing.Point(6, 64);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(58, 13);
+            this.lblLastName.TabIndex = 8;
+            this.lblLastName.Text = "Last Name";
             // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1419, 845);
-            this.Controls.Add(this.BtnSubmit);
-            this.Controls.Add(this.GboxAddStudent);
-            this.Controls.Add(this.BtnClose);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.gBoxAddStudent);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.Title);
             this.Name = "AddStudent";
             this.Text = "Form2";
-            this.GboxAddStudent.ResumeLayout(false);
-            this.GboxAddStudent.PerformLayout();
+            this.gBoxAddStudent.ResumeLayout(false);
+            this.gBoxAddStudent.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,14 +198,18 @@
         #endregion
 
         private System.Windows.Forms.TextBox Title;
-        private System.Windows.Forms.Button BtnClose;
-        private System.Windows.Forms.GroupBox GboxAddStudent;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button BtnSubmit;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.GroupBox gBoxAddStudent;
+        private System.Windows.Forms.TextBox tBoxFirstName;
+        private System.Windows.Forms.Label lblTelenr;
+        private System.Windows.Forms.Label lblAdress;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.TextBox tBoxTelenr;
+        private System.Windows.Forms.TextBox tBoxAdress;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.TextBox tBoxEpost;
+        private System.Windows.Forms.Label lblEpost;
+        private System.Windows.Forms.TextBox tBoxLastName;
+        private System.Windows.Forms.Label lblLastName;
     }
 }
