@@ -28,11 +28,11 @@ namespace DatabasUppgift
             string firstName = tBoxFirstName.Text;
             string lastName = tBoxLastName.Text;
             string adress = tBoxAdress.Text;
-            string teleNr = tBoxTelenr.Text;
+            string telenr = tBoxTelenr.Text;
             string epost = tBoxEpost.Text;
 
-            //Student student = new Student(firstName, lastName, adress, teleNr, epost, 1);
-
+            StudentModel student = new StudentModel(tBoxFirstName.Text, tBoxLastName.Text, tBoxAdress.Text, tBoxTelenr.Text, tBoxEpost.Text, 1);
+            
 
             Home home = new Home();
             this.Close();
