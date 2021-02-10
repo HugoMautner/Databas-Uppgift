@@ -17,14 +17,14 @@ namespace DatabasUppgift
 
         public int id { get; private set; }
 
-        public PersonModel(string first_name, string last_name, string adress, string phone_number, string e_mail, int id)
+        public PersonModel(int id, string first_name, string last_name, string adress, string phone_number, string e_mail)
         {
+            this.id = id;
             this.first_name = first_name;
             this.last_name = last_name;
             this.adress = adress;
             this.phone_number = phone_number;
             this.e_mail = e_mail;
-            this.id = id;
         }
 
         public string FullName
