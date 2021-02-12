@@ -17,55 +17,44 @@ namespace DatabasUppgift
             InitializeComponent();
         }
 
-        private void AppPerson_Click(object sender, EventArgs e)
-        {
-            pnlAddOptions.Hide();
-
-            pnlChangeOptions.Show();
-            pnlRemoveOptions.Show();
-            pnlFindOptions.Show();
-        }
-        private void btnChange_Click(object sender, EventArgs e)
-        {
-            pnlChangeOptions.Hide();
-
-            pnlAddOptions.Show();
-            pnlRemoveOptions.Show();
-            pnlFindOptions.Show();
-        }
-        private void btnRemove_Click(object sender, EventArgs e)
-        {
-            pnlRemoveOptions.Hide();
-
-            pnlChangeOptions.Show();
-            pnlAddOptions.Show();
-            pnlFindOptions.Show();
-        }
-        private void btnFind_Click(object sender, EventArgs e)
-        {
-            pnlFindOptions.Hide();
-
-            pnlChangeOptions.Show();
-            pnlRemoveOptions.Show();
-            pnlAddOptions.Show();
-        }
-
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            //Form active = Form.ActiveForm;
-            //active.IsMdiContainer = true;
-            AddStudent addStudent = new AddStudent();
-            //addStudent.MdiParent = active;
-            //addStudent.Show();
-
-            addStudent.ShowDialog();
+            Students s = new Students();
+            s.Tag = this;
+            s.Show(this);
+            Hide();
         }
 
-
-        private void btnChangeStudent_Click(object sender, EventArgs e)
+        private void btnAddGuardian_Click(object sender, EventArgs e)
         {
-
+            Guardians g = new Guardians();
+            g.Tag = this;
+            g.Show(this);
+            Hide();
         }
 
+        private void btnTeachers_Click(object sender, EventArgs e)
+        {
+            Teachers t = new Teachers();
+            t.Tag = this;
+            t.Show(this);
+            Hide();
+        }
+
+        private void btnCourses_Click(object sender, EventArgs e)
+        {
+            Courses c = new Courses();
+            c.Tag = this;
+            c.Show(this);
+            Hide();
+        }
+
+        private void btnClasses_Click(object sender, EventArgs e)
+        {
+            Classes c = new Classes();
+            c.Tag = this;
+            c.Show(this);
+            Hide();
+        }
     }
 }
