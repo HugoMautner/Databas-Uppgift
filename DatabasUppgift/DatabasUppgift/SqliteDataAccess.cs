@@ -14,8 +14,8 @@ namespace DatabasUppgift
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("INSERT INTO student (id, first_name, last_name, adress, phone_number, e_mail) " +
-                    "VALUES (@id, @first_name, @last_name, @adress, @phone_number, @e_mail)", student);
+                cnn.Execute("INSERT INTO student (first_name, last_name, adress, phone_number, e_mail) " +
+                    "VALUES (@first_name, @last_name, @adress, @phone_number, @e_mail)", student);
             }
         }
 

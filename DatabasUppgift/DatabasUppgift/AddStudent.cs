@@ -31,8 +31,7 @@ namespace DatabasUppgift
             string telenr = tBoxTelenr.Text;
             string epost = tBoxEpost.Text;
 
-            StudentModel student = new StudentModel(3, "harry", "potter", "privet drive", "898989", "harry.potter@gmail.com");
-            //StudentModel student = new StudentModel(3, tBoxFirstName.Text, tBoxLastName.Text, tBoxAdress.Text, tBoxTelenr.Text, tBoxEpost.Text);
+            StudentModel student = new StudentModel(-1, tBoxFirstName.Text, tBoxLastName.Text, tBoxAdress.Text, tBoxTelenr.Text, tBoxEpost.Text);
             new SqliteDataAccess().SaveStudent(student);
 
             Home home = new Home();
