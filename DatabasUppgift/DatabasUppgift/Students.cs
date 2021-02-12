@@ -7,20 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DatabasUppgift
 {
-    public partial class AddStudent : Form
+    public partial class Students : Form
     {
-        public AddStudent()
+        public Students()
         {
             InitializeComponent();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            this.Close();
+            var home = (Home)Tag;
+            home.Show();
+            Close();
         }
 
         private void BtnSubmit_Click(object sender, EventArgs e)
@@ -31,11 +33,20 @@ namespace DatabasUppgift
             string teleNr = tBoxTelenr.Text;
             string epost = tBoxEpost.Text;
 
-            //Student student = new Student(firstName, lastName, adress, teleNr, epost, 1);
+            //Gotta check for bad input before
+            //Student student = new Student(firstName, lastName, adress, teleNr, epost);
+        }
 
+        private void btnSubmitRemove_Click(object sender, EventArgs e)
+        {
+            string id = tBoxID.Text;
 
-            Home home = new Home();
-            this.Close();
+            //remove student(id)
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
