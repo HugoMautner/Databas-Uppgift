@@ -37,6 +37,5 @@ namespace DatabasUppgift
             Home home = new Home();
             this.Close();
         }
-
     }
 }
