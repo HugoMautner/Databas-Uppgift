@@ -19,6 +19,17 @@ namespace DatabasUppgift
             }
         }
 
+
+        public void RemoveStudent(int id)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("DELETE FROM student " +
+                    "WHERE id = '" + id + "'");
+            }
+        }
+
+
         public static List<StudentModel> LoadStudents()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
