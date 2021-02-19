@@ -82,14 +82,6 @@ namespace DatabasUppgift
         }
 
 
-
-        private void BtnRemove_Click(object sender, EventArgs e)
-        {
-
-        }
-    
-
-
     private void LoadStudents()
         {
             lBoxStudents.Items.Clear();

@@ -313,7 +313,6 @@
             this.btnRemove.TabIndex = 27;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
             // pnlOptions
             // 

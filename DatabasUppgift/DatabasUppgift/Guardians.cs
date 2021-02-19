@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Diagnostics;
+
 namespace DatabasUppgift
 {
     public partial class Guardians : Form
@@ -31,9 +33,33 @@ namespace DatabasUppgift
             LoadGuardians();
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void btnSubmitFind_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int id = Int32.Parse(tBoxID.Text);
+                //ändra till .LoadGuardians()
+                var guardians = SqliteDataAccess.LoadStudents();
 
+                foreach (StudentModel gm in guardians)
+                {
+                    if (id == gm.id)
+                    {
+                        Debug.WriteLine("Guardian found!");
+                        pnlOptions.Hide();
+                        return;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tBoxID.Clear();
+                return;
+            }
+
+            MessageBox.Show("Guardian not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            tBoxID.Clear();
         }
 
         private void LoadGuardians()
@@ -46,5 +72,6 @@ namespace DatabasUppgift
             foreach (StudentModel s in students)
                 lBoxGuardians.Items.Add(s.first_name);
         }
+
     }
 }

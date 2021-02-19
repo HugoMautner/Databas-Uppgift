@@ -47,9 +47,12 @@
             this.lBoxGuardians = new System.Windows.Forms.ListBox();
             this.btnLoadGuardians = new System.Windows.Forms.Button();
             this.gBoxFindGuardian = new System.Windows.Forms.GroupBox();
-            this.btnSubmitRemove = new System.Windows.Forms.Button();
+            this.btnSubmitFind = new System.Windows.Forms.Button();
             this.tBoxID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
+            this.pnlOptions = new System.Windows.Forms.Panel();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnChange = new System.Windows.Forms.Button();
             this.gBoxAddGuardian.SuspendLayout();
             this.gBoxGuardians.SuspendLayout();
             this.gBoxFindGuardian.SuspendLayout();
@@ -123,7 +126,6 @@
             this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblLastName
             // 
@@ -229,7 +231,7 @@
             // 
             // gBoxFindGuardian
             // 
-            this.gBoxFindGuardian.Controls.Add(this.btnSubmitRemove);
+            this.gBoxFindGuardian.Controls.Add(this.btnSubmitFind);
             this.gBoxFindGuardian.Controls.Add(this.tBoxID);
             this.gBoxFindGuardian.Controls.Add(this.lblID);
             this.gBoxFindGuardian.Location = new System.Drawing.Point(933, 175);
@@ -239,14 +241,15 @@
             this.gBoxFindGuardian.TabStop = false;
             this.gBoxFindGuardian.Text = "Enter guardian to find";
             // 
-            // btnSubmitRemove
+            // btnSubmitFind
             // 
-            this.btnSubmitRemove.Location = new System.Drawing.Point(201, 80);
-            this.btnSubmitRemove.Name = "btnSubmitRemove";
-            this.btnSubmitRemove.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmitRemove.TabIndex = 5;
-            this.btnSubmitRemove.Text = "Submit";
-            this.btnSubmitRemove.UseVisualStyleBackColor = true;
+            this.btnSubmitFind.Location = new System.Drawing.Point(201, 80);
+            this.btnSubmitFind.Name = "btnSubmitFind";
+            this.btnSubmitFind.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmitFind.TabIndex = 5;
+            this.btnSubmitFind.Text = "Submit";
+            this.btnSubmitFind.UseVisualStyleBackColor = true;
+            this.btnSubmitFind.Click += new System.EventHandler(this.btnSubmitFind_Click);
             // 
             // tBoxID
             // 
@@ -264,11 +267,39 @@
             this.lblID.TabIndex = 0;
             this.lblID.Text = "ID";
             // 
+            // pnlOptions
+            // 
+            this.pnlOptions.Location = new System.Drawing.Point(944, 327);
+            this.pnlOptions.Name = "pnlOptions";
+            this.pnlOptions.Size = new System.Drawing.Size(265, 41);
+            this.pnlOptions.TabIndex = 33;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(1092, 307);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(106, 41);
+            this.btnRemove.TabIndex = 32;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            // 
+            // btnChange
+            // 
+            this.btnChange.Location = new System.Drawing.Point(942, 307);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(106, 41);
+            this.btnChange.TabIndex = 31;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = true;
+            // 
             // Guardians
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1419, 845);
+            this.Controls.Add(this.pnlOptions);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.gBoxFindGuardian);
             this.Controls.Add(this.gBoxGuardians);
             this.Controls.Add(this.gBoxAddGuardian);
@@ -309,8 +340,11 @@
         private System.Windows.Forms.ListBox lBoxGuardians;
         private System.Windows.Forms.Button btnLoadGuardians;
         private System.Windows.Forms.GroupBox gBoxFindGuardian;
-        private System.Windows.Forms.Button btnSubmitRemove;
+        private System.Windows.Forms.Button btnSubmitFind;
         private System.Windows.Forms.TextBox tBoxID;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Panel pnlOptions;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnChange;
     }
 }
