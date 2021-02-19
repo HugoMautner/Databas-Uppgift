@@ -64,7 +64,7 @@
             this.Title.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Title.Location = new System.Drawing.Point(528, 15);
-            this.Title.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Title.Margin = new System.Windows.Forms.Padding(4);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(704, 119);
             this.Title.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             this.btnHome.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Location = new System.Drawing.Point(1648, 967);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(228, 58);
             this.btnHome.TabIndex = 3;
@@ -97,9 +97,9 @@
             this.gBoxAdd.Controls.Add(this.lblAdress);
             this.gBoxAdd.Controls.Add(this.lblFirstName);
             this.gBoxAdd.Location = new System.Drawing.Point(688, 215);
-            this.gBoxAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxAdd.Margin = new System.Windows.Forms.Padding(4);
             this.gBoxAdd.Name = "gBoxAdd";
-            this.gBoxAdd.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxAdd.Padding = new System.Windows.Forms.Padding(4);
             this.gBoxAdd.Size = new System.Drawing.Size(376, 270);
             this.gBoxAdd.TabIndex = 4;
             this.gBoxAdd.TabStop = false;
@@ -108,7 +108,7 @@
             // tBoxLastName
             // 
             this.tBoxLastName.Location = new System.Drawing.Point(141, 75);
-            this.tBoxLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tBoxLastName.Margin = new System.Windows.Forms.Padding(4);
             this.tBoxLastName.Name = "tBoxLastName";
             this.tBoxLastName.Size = new System.Drawing.Size(225, 22);
             this.tBoxLastName.TabIndex = 9;
@@ -116,7 +116,7 @@
             // btnSubmitAdd
             // 
             this.btnSubmitAdd.Location = new System.Drawing.Point(268, 234);
-            this.btnSubmitAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSubmitAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmitAdd.Name = "btnSubmitAdd";
             this.btnSubmitAdd.Size = new System.Drawing.Size(100, 28);
             this.btnSubmitAdd.TabIndex = 5;
@@ -137,7 +137,7 @@
             // tBoxEpost
             // 
             this.tBoxEpost.Location = new System.Drawing.Point(141, 188);
-            this.tBoxEpost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tBoxEpost.Margin = new System.Windows.Forms.Padding(4);
             this.tBoxEpost.Name = "tBoxEpost";
             this.tBoxEpost.Size = new System.Drawing.Size(225, 22);
             this.tBoxEpost.TabIndex = 7;
@@ -155,7 +155,7 @@
             // tBoxTelenr
             // 
             this.tBoxTelenr.Location = new System.Drawing.Point(141, 151);
-            this.tBoxTelenr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tBoxTelenr.Margin = new System.Windows.Forms.Padding(4);
             this.tBoxTelenr.Name = "tBoxTelenr";
             this.tBoxTelenr.Size = new System.Drawing.Size(225, 22);
             this.tBoxTelenr.TabIndex = 5;
@@ -163,7 +163,7 @@
             // tBoxAdress
             // 
             this.tBoxAdress.Location = new System.Drawing.Point(141, 114);
-            this.tBoxAdress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tBoxAdress.Margin = new System.Windows.Forms.Padding(4);
             this.tBoxAdress.Name = "tBoxAdress";
             this.tBoxAdress.Size = new System.Drawing.Size(225, 22);
             this.tBoxAdress.TabIndex = 4;
@@ -171,7 +171,7 @@
             // tBoxFirstName
             // 
             this.tBoxFirstName.Location = new System.Drawing.Point(141, 37);
-            this.tBoxFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tBoxFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.tBoxFirstName.Name = "tBoxFirstName";
             this.tBoxFirstName.Size = new System.Drawing.Size(225, 22);
             this.tBoxFirstName.TabIndex = 3;
@@ -223,9 +223,9 @@
             this.gBoxRemove.Controls.Add(this.tBoxID);
             this.gBoxRemove.Controls.Add(this.lblID);
             this.gBoxRemove.Location = new System.Drawing.Point(1244, 215);
-            this.gBoxRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxRemove.Margin = new System.Windows.Forms.Padding(4);
             this.gBoxRemove.Name = "gBoxRemove";
-            this.gBoxRemove.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxRemove.Padding = new System.Windows.Forms.Padding(4);
             this.gBoxRemove.Size = new System.Drawing.Size(376, 134);
             this.gBoxRemove.TabIndex = 10;
             this.gBoxRemove.TabStop = false;
@@ -234,7 +234,7 @@
             // btnSubmitRemove
             // 
             this.btnSubmitRemove.Location = new System.Drawing.Point(268, 98);
-            this.btnSubmitRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSubmitRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmitRemove.Name = "btnSubmitRemove";
             this.btnSubmitRemove.Size = new System.Drawing.Size(100, 28);
             this.btnSubmitRemove.TabIndex = 5;
@@ -245,7 +245,7 @@
             // tBoxID
             // 
             this.tBoxID.Location = new System.Drawing.Point(141, 37);
-            this.tBoxID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tBoxID.Margin = new System.Windows.Forms.Padding(4);
             this.tBoxID.Name = "tBoxID";
             this.tBoxID.Size = new System.Drawing.Size(225, 22);
             this.tBoxID.TabIndex = 3;
@@ -265,9 +265,9 @@
             this.gBoxStudents.Controls.Add(this.lBoxStudents);
             this.gBoxStudents.Controls.Add(this.btnLoad);
             this.gBoxStudents.Location = new System.Drawing.Point(93, 215);
-            this.gBoxStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxStudents.Margin = new System.Windows.Forms.Padding(4);
             this.gBoxStudents.Name = "gBoxStudents";
-            this.gBoxStudents.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxStudents.Padding = new System.Windows.Forms.Padding(4);
             this.gBoxStudents.Size = new System.Drawing.Size(376, 752);
             this.gBoxStudents.TabIndex = 11;
             this.gBoxStudents.TabStop = false;
@@ -278,7 +278,7 @@
             this.lBoxStudents.FormattingEnabled = true;
             this.lBoxStudents.ItemHeight = 16;
             this.lBoxStudents.Location = new System.Drawing.Point(8, 37);
-            this.lBoxStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lBoxStudents.Margin = new System.Windows.Forms.Padding(4);
             this.lBoxStudents.Name = "lBoxStudents";
             this.lBoxStudents.Size = new System.Drawing.Size(359, 660);
             this.lBoxStudents.TabIndex = 11;
@@ -286,17 +286,18 @@
             // btnLoad
             // 
             this.btnLoad.Location = new System.Drawing.Point(241, 710);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(127, 34);
             this.btnLoad.TabIndex = 10;
             this.btnLoad.Text = "Load students";
             this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // btnChange
             // 
             this.btnChange.Location = new System.Drawing.Point(1256, 378);
-            this.btnChange.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(4);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(141, 50);
             this.btnChange.TabIndex = 26;
@@ -306,17 +307,18 @@
             // btnRemove
             // 
             this.btnRemove.Location = new System.Drawing.Point(1456, 378);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(141, 50);
             this.btnRemove.TabIndex = 27;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
             // pnlOptions
             // 
-            this.pnlOptions.Location = new System.Drawing.Point(1259, 378);
-            this.pnlOptions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlOptions.Location = new System.Drawing.Point(1259, 403);
+            this.pnlOptions.Margin = new System.Windows.Forms.Padding(4);
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.Size = new System.Drawing.Size(353, 50);
             this.pnlOptions.TabIndex = 28;
@@ -335,7 +337,7 @@
             this.Controls.Add(this.gBoxAdd);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.Title);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Students";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

@@ -20,6 +20,7 @@ namespace DatabasUppgift
         public Students()
         {
             InitializeComponent();
+            LoadStudents();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -59,6 +60,7 @@ namespace DatabasUppgift
                     if (id == sm.id)
                     {
                         Debug.WriteLine("Student found!");
+                        pnlOptions.Hide();
                         return;
                     }
                 }
@@ -73,5 +75,28 @@ namespace DatabasUppgift
             MessageBox.Show("Student not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             tBoxID.Clear();
         }
+
+        private void BtnLoad_Click(object sender, EventArgs e)
+        {
+            LoadStudents();
+        }
+
+
+
+        private void BtnRemove_Click(object sender, EventArgs e)
+        {
+
+        }
+    
+
+
+    private void LoadStudents()
+        {
+            lBoxStudents.Items.Clear();
+            var students = SqliteDataAccess.LoadStudents();
+            foreach (StudentModel s in students)
+                lBoxStudents.Items.Add(s.NameAndId);
+        }
+
     }
 }
