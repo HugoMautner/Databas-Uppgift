@@ -26,6 +26,10 @@ namespace DatabasUppgift
             this.phone_number = phone_number;
             this.e_mail = e_mail;
         }
+        public PersonModel()
+        {
+
+        }
 
         public string FullName
         {
