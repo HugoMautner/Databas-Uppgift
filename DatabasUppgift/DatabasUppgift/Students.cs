@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Ta bort senare
+using System.Diagnostics;
+
+//Kanske är trevligt med en confirm-box innan man tar livet av folk
+
 namespace DatabasUppgift
 {
     public partial class Students : Form
@@ -25,6 +30,7 @@ namespace DatabasUppgift
 
         private void BtnSubmit_Click(object sender, EventArgs e)
         {
+            //lägg till error om saker inte går igenom
             string firstName = tBoxFirstName.Text;
             string lastName = tBoxLastName.Text;
             string adress = tBoxAdress.Text;
@@ -36,6 +42,20 @@ namespace DatabasUppgift
 
             Home home = new Home();
             this.Close();
+        }
+
+        private void BtnSubmitRemove_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Int32.Parse(tBoxID.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            tBoxID.Clear();
         }
     }
 }
