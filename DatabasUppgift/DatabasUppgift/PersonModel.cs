@@ -26,12 +26,32 @@ namespace DatabasUppgift
             this.phone_number = phone_number;
             this.e_mail = e_mail;
         }
+        public PersonModel()
+        {
+
+        }
 
         public string FullName
         {
             get
             {
                 return first_name + " " + last_name;
+            }
+        }
+
+        public string AllInfo
+        {
+            get
+            {
+                return id + " " + first_name + " " + last_name + " " + adress + " " + phone_number + " " + e_mail;
+            }
+        }
+
+        public string NameAndId
+        {
+            get
+            {
+                return id + " " + first_name + " " + last_name;
             }
         }
     }

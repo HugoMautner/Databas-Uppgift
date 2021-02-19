@@ -43,7 +43,19 @@
             this.lblTelenr = new System.Windows.Forms.Label();
             this.lblAdress = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
+            this.gBoxGuardians = new System.Windows.Forms.GroupBox();
+            this.lBoxGuardians = new System.Windows.Forms.ListBox();
+            this.btnLoadGuardians = new System.Windows.Forms.Button();
+            this.gBoxFindGuardian = new System.Windows.Forms.GroupBox();
+            this.btnSubmitFind = new System.Windows.Forms.Button();
+            this.tBoxID = new System.Windows.Forms.TextBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.pnlOptions = new System.Windows.Forms.Panel();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnChange = new System.Windows.Forms.Button();
             this.gBoxAddGuardian.SuspendLayout();
+            this.gBoxGuardians.SuspendLayout();
+            this.gBoxFindGuardian.SuspendLayout();
             this.SuspendLayout();
             // 
             // Title
@@ -92,13 +104,12 @@
             this.gBoxAddGuardian.Controls.Add(this.lblTelenr);
             this.gBoxAddGuardian.Controls.Add(this.lblAdress);
             this.gBoxAddGuardian.Controls.Add(this.lblFirstName);
-            this.gBoxAddGuardian.Location = new System.Drawing.Point(925, 189);
+            this.gBoxAddGuardian.Location = new System.Drawing.Point(516, 175);
             this.gBoxAddGuardian.Name = "gBoxAddGuardian";
             this.gBoxAddGuardian.Size = new System.Drawing.Size(282, 219);
             this.gBoxAddGuardian.TabIndex = 28;
             this.gBoxAddGuardian.TabStop = false;
             this.gBoxAddGuardian.Text = "Enter Guardian Details";
-            this.gBoxAddGuardian.Enter += new System.EventHandler(this.gBoxAddStudent_Enter);
             // 
             // tBoxLastName
             // 
@@ -189,11 +200,108 @@
             this.lblFirstName.TabIndex = 0;
             this.lblFirstName.Text = "First Name";
             // 
+            // gBoxGuardians
+            // 
+            this.gBoxGuardians.Controls.Add(this.lBoxGuardians);
+            this.gBoxGuardians.Controls.Add(this.btnLoadGuardians);
+            this.gBoxGuardians.Location = new System.Drawing.Point(70, 175);
+            this.gBoxGuardians.Name = "gBoxGuardians";
+            this.gBoxGuardians.Size = new System.Drawing.Size(282, 611);
+            this.gBoxGuardians.TabIndex = 29;
+            this.gBoxGuardians.TabStop = false;
+            this.gBoxGuardians.Text = "Guardians";
+            // 
+            // lBoxGuardians
+            // 
+            this.lBoxGuardians.FormattingEnabled = true;
+            this.lBoxGuardians.Location = new System.Drawing.Point(6, 30);
+            this.lBoxGuardians.Name = "lBoxGuardians";
+            this.lBoxGuardians.Size = new System.Drawing.Size(270, 537);
+            this.lBoxGuardians.TabIndex = 11;
+            // 
+            // btnLoadGuardians
+            // 
+            this.btnLoadGuardians.Location = new System.Drawing.Point(181, 577);
+            this.btnLoadGuardians.Name = "btnLoadGuardians";
+            this.btnLoadGuardians.Size = new System.Drawing.Size(95, 28);
+            this.btnLoadGuardians.TabIndex = 10;
+            this.btnLoadGuardians.Text = "Load guardians";
+            this.btnLoadGuardians.UseVisualStyleBackColor = true;
+            this.btnLoadGuardians.Click += new System.EventHandler(this.btnLoadGuardians_Click);
+            // 
+            // gBoxFindGuardian
+            // 
+            this.gBoxFindGuardian.Controls.Add(this.btnSubmitFind);
+            this.gBoxFindGuardian.Controls.Add(this.tBoxID);
+            this.gBoxFindGuardian.Controls.Add(this.lblID);
+            this.gBoxFindGuardian.Location = new System.Drawing.Point(933, 175);
+            this.gBoxFindGuardian.Name = "gBoxFindGuardian";
+            this.gBoxFindGuardian.Size = new System.Drawing.Size(282, 109);
+            this.gBoxFindGuardian.TabIndex = 30;
+            this.gBoxFindGuardian.TabStop = false;
+            this.gBoxFindGuardian.Text = "Enter guardian to find";
+            // 
+            // btnSubmitFind
+            // 
+            this.btnSubmitFind.Location = new System.Drawing.Point(201, 80);
+            this.btnSubmitFind.Name = "btnSubmitFind";
+            this.btnSubmitFind.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmitFind.TabIndex = 5;
+            this.btnSubmitFind.Text = "Submit";
+            this.btnSubmitFind.UseVisualStyleBackColor = true;
+            this.btnSubmitFind.Click += new System.EventHandler(this.btnSubmitFind_Click);
+            // 
+            // tBoxID
+            // 
+            this.tBoxID.Location = new System.Drawing.Point(106, 30);
+            this.tBoxID.Name = "tBoxID";
+            this.tBoxID.Size = new System.Drawing.Size(170, 20);
+            this.tBoxID.TabIndex = 3;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(6, 33);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.TabIndex = 0;
+            this.lblID.Text = "ID";
+            // 
+            // pnlOptions
+            // 
+            this.pnlOptions.Location = new System.Drawing.Point(944, 327);
+            this.pnlOptions.Name = "pnlOptions";
+            this.pnlOptions.Size = new System.Drawing.Size(265, 41);
+            this.pnlOptions.TabIndex = 33;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(1092, 307);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(106, 41);
+            this.btnRemove.TabIndex = 32;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            // 
+            // btnChange
+            // 
+            this.btnChange.Location = new System.Drawing.Point(942, 307);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(106, 41);
+            this.btnChange.TabIndex = 31;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = true;
+            // 
             // Guardians
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1419, 845);
+            this.Controls.Add(this.pnlOptions);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnChange);
+            this.Controls.Add(this.gBoxFindGuardian);
+            this.Controls.Add(this.gBoxGuardians);
             this.Controls.Add(this.gBoxAddGuardian);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.lblPage);
@@ -203,6 +311,9 @@
             this.Text = "Guardians";
             this.gBoxAddGuardian.ResumeLayout(false);
             this.gBoxAddGuardian.PerformLayout();
+            this.gBoxGuardians.ResumeLayout(false);
+            this.gBoxFindGuardian.ResumeLayout(false);
+            this.gBoxFindGuardian.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +336,15 @@
         private System.Windows.Forms.Label lblTelenr;
         private System.Windows.Forms.Label lblAdress;
         private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.GroupBox gBoxGuardians;
+        private System.Windows.Forms.ListBox lBoxGuardians;
+        private System.Windows.Forms.Button btnLoadGuardians;
+        private System.Windows.Forms.GroupBox gBoxFindGuardian;
+        private System.Windows.Forms.Button btnSubmitFind;
+        private System.Windows.Forms.TextBox tBoxID;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Panel pnlOptions;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Button btnChange;
     }
 }
