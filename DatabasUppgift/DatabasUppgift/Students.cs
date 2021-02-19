@@ -24,8 +24,9 @@ namespace DatabasUppgift
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            this.Close();
+            var home = (Home)Tag;
+            home.Show();
+            Close();
         }
 
         private void BtnSubmit_Click(object sender, EventArgs e)
@@ -37,11 +38,18 @@ namespace DatabasUppgift
             string telenr = tBoxTelenr.Text;
             string epost = tBoxEpost.Text;
 
-            StudentModel student = new StudentModel(-1, tBoxFirstName.Text, tBoxLastName.Text, tBoxAdress.Text, tBoxTelenr.Text, tBoxEpost.Text);
+            StudentModel student = new StudentModel(-1, tBoxFirstName.Text, 
+                tBoxLastName.Text, tBoxAdress.Text, tBoxTelenr.Text, tBoxEpost.Text);
             new SqliteDataAccess().SaveStudent(student);
 
-            Home home = new Home();
-            this.Close();
+            var home = (Home)Tag;
+            home.Show();
+            Close();
+        }
+
+        private void btnSubmitRemove_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void BtnSubmitRemove_Click(object sender, EventArgs e)
