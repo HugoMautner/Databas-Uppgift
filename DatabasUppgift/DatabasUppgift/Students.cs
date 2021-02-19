@@ -47,22 +47,30 @@ namespace DatabasUppgift
             Close();
         }
 
-        private void btnSubmitRemove_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnSubmitRemove_Click(object sender, EventArgs e)
+        private void BtnSubmitRemove_Click_1(object sender, EventArgs e)
         {
             try
             {
                 int id = Int32.Parse(tBoxID.Text);
+                var students = SqliteDataAccess.LoadStudents();
+
+                foreach (StudentModel sm in students)
+                {
+                    if (id == sm.id)
+                    {
+                        Debug.WriteLine("Student found!");
+                        return;
+                    }
+                }
             }
             catch (Exception)
             {
                 MessageBox.Show("Invalid number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tBoxID.Clear();
+                return;
             }
 
+            MessageBox.Show("Student not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             tBoxID.Clear();
         }
     }
