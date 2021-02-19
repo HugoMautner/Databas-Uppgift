@@ -218,7 +218,6 @@
             this.btnSubmitRemove.TabIndex = 5;
             this.btnSubmitRemove.Text = "Submit";
             this.btnSubmitRemove.UseVisualStyleBackColor = true;
-            this.btnSubmitRemove.Click += new System.EventHandler(this.btnSubmitRemove_Click);
             // 
             // tBoxID
             // 
@@ -255,7 +254,6 @@
             this.btnLoad.TabIndex = 10;
             this.btnLoad.Text = "Load students";
             this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // lBoxStudents
             // 
