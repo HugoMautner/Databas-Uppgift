@@ -48,8 +48,11 @@
             this.tBoxID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.gBoxStudents = new System.Windows.Forms.GroupBox();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.lBoxStudents = new System.Windows.Forms.ListBox();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnChange = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.pnlOptions = new System.Windows.Forms.Panel();
             this.gBoxAdd.SuspendLayout();
             this.gBoxRemove.SuspendLayout();
             this.gBoxStudents.SuspendLayout();
@@ -218,6 +221,7 @@
             this.btnSubmitRemove.TabIndex = 5;
             this.btnSubmitRemove.Text = "Submit";
             this.btnSubmitRemove.UseVisualStyleBackColor = true;
+            this.btnSubmitRemove.Click += new System.EventHandler(this.btnSubmitRemove_Click);
             // 
             // tBoxID
             // 
@@ -246,6 +250,14 @@
             this.gBoxStudents.TabStop = false;
             this.gBoxStudents.Text = "Students";
             // 
+            // lBoxStudents
+            // 
+            this.lBoxStudents.FormattingEnabled = true;
+            this.lBoxStudents.Location = new System.Drawing.Point(6, 30);
+            this.lBoxStudents.Name = "lBoxStudents";
+            this.lBoxStudents.Size = new System.Drawing.Size(270, 537);
+            this.lBoxStudents.TabIndex = 11;
+            // 
             // btnLoad
             // 
             this.btnLoad.Location = new System.Drawing.Point(181, 577);
@@ -255,19 +267,39 @@
             this.btnLoad.Text = "Load students";
             this.btnLoad.UseVisualStyleBackColor = true;
             // 
-            // lBoxStudents
+            // btnChange
             // 
-            this.lBoxStudents.FormattingEnabled = true;
-            this.lBoxStudents.Location = new System.Drawing.Point(6, 30);
-            this.lBoxStudents.Name = "lBoxStudents";
-            this.lBoxStudents.Size = new System.Drawing.Size(270, 537);
-            this.lBoxStudents.TabIndex = 11;
+            this.btnChange.Location = new System.Drawing.Point(942, 307);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(106, 41);
+            this.btnChange.TabIndex = 26;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = true;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(1092, 307);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(106, 41);
+            this.btnRemove.TabIndex = 27;
+            this.btnRemove.Text = "Remove";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            // 
+            // pnlOptions
+            // 
+            this.pnlOptions.Location = new System.Drawing.Point(944, 307);
+            this.pnlOptions.Name = "pnlOptions";
+            this.pnlOptions.Size = new System.Drawing.Size(265, 41);
+            this.pnlOptions.TabIndex = 28;
             // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1419, 845);
+            this.Controls.Add(this.pnlOptions);
+            this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.gBoxStudents);
             this.Controls.Add(this.gBoxRemove);
             this.Controls.Add(this.lblPage);
@@ -311,5 +343,8 @@
         private System.Windows.Forms.GroupBox gBoxStudents;
         private System.Windows.Forms.ListBox lBoxStudents;
         private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Panel pnlOptions;
     }
 }
