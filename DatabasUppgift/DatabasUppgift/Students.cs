@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DatabasUppgift
 {
-    public partial class AddStudent : Form
+    public partial class Students : Form
     {
-        public AddStudent()
+        public Students()
         {
             InitializeComponent();
         }
