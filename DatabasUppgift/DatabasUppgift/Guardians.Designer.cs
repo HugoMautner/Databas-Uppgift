@@ -43,7 +43,16 @@
             this.lblTelenr = new System.Windows.Forms.Label();
             this.lblAdress = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
+            this.gBoxGuardians = new System.Windows.Forms.GroupBox();
+            this.lBoxGuardians = new System.Windows.Forms.ListBox();
+            this.btnLoadGuardians = new System.Windows.Forms.Button();
+            this.gBoxFindGuardian = new System.Windows.Forms.GroupBox();
+            this.btnSubmitRemove = new System.Windows.Forms.Button();
+            this.tBoxID = new System.Windows.Forms.TextBox();
+            this.lblID = new System.Windows.Forms.Label();
             this.gBoxAddGuardian.SuspendLayout();
+            this.gBoxGuardians.SuspendLayout();
+            this.gBoxFindGuardian.SuspendLayout();
             this.SuspendLayout();
             // 
             // Title
@@ -92,13 +101,12 @@
             this.gBoxAddGuardian.Controls.Add(this.lblTelenr);
             this.gBoxAddGuardian.Controls.Add(this.lblAdress);
             this.gBoxAddGuardian.Controls.Add(this.lblFirstName);
-            this.gBoxAddGuardian.Location = new System.Drawing.Point(925, 189);
+            this.gBoxAddGuardian.Location = new System.Drawing.Point(516, 175);
             this.gBoxAddGuardian.Name = "gBoxAddGuardian";
             this.gBoxAddGuardian.Size = new System.Drawing.Size(282, 219);
             this.gBoxAddGuardian.TabIndex = 28;
             this.gBoxAddGuardian.TabStop = false;
             this.gBoxAddGuardian.Text = "Enter Guardian Details";
-            this.gBoxAddGuardian.Enter += new System.EventHandler(this.gBoxAddStudent_Enter);
             // 
             // tBoxLastName
             // 
@@ -115,6 +123,7 @@
             this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblLastName
             // 
@@ -189,11 +198,79 @@
             this.lblFirstName.TabIndex = 0;
             this.lblFirstName.Text = "First Name";
             // 
+            // gBoxGuardians
+            // 
+            this.gBoxGuardians.Controls.Add(this.lBoxGuardians);
+            this.gBoxGuardians.Controls.Add(this.btnLoadGuardians);
+            this.gBoxGuardians.Location = new System.Drawing.Point(70, 175);
+            this.gBoxGuardians.Name = "gBoxGuardians";
+            this.gBoxGuardians.Size = new System.Drawing.Size(282, 611);
+            this.gBoxGuardians.TabIndex = 29;
+            this.gBoxGuardians.TabStop = false;
+            this.gBoxGuardians.Text = "Guardians";
+            // 
+            // lBoxGuardians
+            // 
+            this.lBoxGuardians.FormattingEnabled = true;
+            this.lBoxGuardians.Location = new System.Drawing.Point(6, 30);
+            this.lBoxGuardians.Name = "lBoxGuardians";
+            this.lBoxGuardians.Size = new System.Drawing.Size(270, 537);
+            this.lBoxGuardians.TabIndex = 11;
+            // 
+            // btnLoadGuardians
+            // 
+            this.btnLoadGuardians.Location = new System.Drawing.Point(181, 577);
+            this.btnLoadGuardians.Name = "btnLoadGuardians";
+            this.btnLoadGuardians.Size = new System.Drawing.Size(95, 28);
+            this.btnLoadGuardians.TabIndex = 10;
+            this.btnLoadGuardians.Text = "Load guardians";
+            this.btnLoadGuardians.UseVisualStyleBackColor = true;
+            this.btnLoadGuardians.Click += new System.EventHandler(this.btnLoadGuardians_Click);
+            // 
+            // gBoxFindGuardian
+            // 
+            this.gBoxFindGuardian.Controls.Add(this.btnSubmitRemove);
+            this.gBoxFindGuardian.Controls.Add(this.tBoxID);
+            this.gBoxFindGuardian.Controls.Add(this.lblID);
+            this.gBoxFindGuardian.Location = new System.Drawing.Point(933, 175);
+            this.gBoxFindGuardian.Name = "gBoxFindGuardian";
+            this.gBoxFindGuardian.Size = new System.Drawing.Size(282, 109);
+            this.gBoxFindGuardian.TabIndex = 30;
+            this.gBoxFindGuardian.TabStop = false;
+            this.gBoxFindGuardian.Text = "Enter guardian to find";
+            // 
+            // btnSubmitRemove
+            // 
+            this.btnSubmitRemove.Location = new System.Drawing.Point(201, 80);
+            this.btnSubmitRemove.Name = "btnSubmitRemove";
+            this.btnSubmitRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmitRemove.TabIndex = 5;
+            this.btnSubmitRemove.Text = "Submit";
+            this.btnSubmitRemove.UseVisualStyleBackColor = true;
+            // 
+            // tBoxID
+            // 
+            this.tBoxID.Location = new System.Drawing.Point(106, 30);
+            this.tBoxID.Name = "tBoxID";
+            this.tBoxID.Size = new System.Drawing.Size(170, 20);
+            this.tBoxID.TabIndex = 3;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(6, 33);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.TabIndex = 0;
+            this.lblID.Text = "ID";
+            // 
             // Guardians
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1419, 845);
+            this.Controls.Add(this.gBoxFindGuardian);
+            this.Controls.Add(this.gBoxGuardians);
             this.Controls.Add(this.gBoxAddGuardian);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.lblPage);
@@ -203,6 +280,9 @@
             this.Text = "Guardians";
             this.gBoxAddGuardian.ResumeLayout(false);
             this.gBoxAddGuardian.PerformLayout();
+            this.gBoxGuardians.ResumeLayout(false);
+            this.gBoxFindGuardian.ResumeLayout(false);
+            this.gBoxFindGuardian.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +305,12 @@
         private System.Windows.Forms.Label lblTelenr;
         private System.Windows.Forms.Label lblAdress;
         private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.GroupBox gBoxGuardians;
+        private System.Windows.Forms.ListBox lBoxGuardians;
+        private System.Windows.Forms.Button btnLoadGuardians;
+        private System.Windows.Forms.GroupBox gBoxFindGuardian;
+        private System.Windows.Forms.Button btnSubmitRemove;
+        private System.Windows.Forms.TextBox tBoxID;
+        private System.Windows.Forms.Label lblID;
     }
 }

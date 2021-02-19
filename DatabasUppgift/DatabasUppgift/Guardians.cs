@@ -24,7 +24,16 @@ namespace DatabasUppgift
             Close();
         }
 
-        private void gBoxAddStudent_Enter(object sender, EventArgs e)
+        private void btnLoadGuardians_Click(object sender, EventArgs e)
+        {
+            //Loading students, change to load guardians later
+
+            var students = SqliteDataAccess.LoadStudents();
+            foreach (StudentModel s in students)
+                lBoxGuardians.Items.Add(s.first_name);
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
 
         }
