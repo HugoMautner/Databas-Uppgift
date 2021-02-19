@@ -7,22 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace DatabasUppgift
 {
-    public partial class Students : Form
+    public partial class AddStudent : Form
     {
-        public Students()
+        public AddStudent()
         {
             InitializeComponent();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
-            var home = (Home)Tag;
-            home.Show();
-            Close();
+            Home home = new Home();
+            this.Close();
         }
 
         private void BtnSubmit_Click(object sender, EventArgs e)
@@ -30,23 +28,14 @@ namespace DatabasUppgift
             string firstName = tBoxFirstName.Text;
             string lastName = tBoxLastName.Text;
             string adress = tBoxAdress.Text;
-            string teleNr = tBoxTelenr.Text;
+            string telenr = tBoxTelenr.Text;
             string epost = tBoxEpost.Text;
 
-            //Gotta check for bad input before
-            //Student student = new Student(firstName, lastName, adress, teleNr, epost);
-        }
+            StudentModel student = new StudentModel(-1, tBoxFirstName.Text, tBoxLastName.Text, tBoxAdress.Text, tBoxTelenr.Text, tBoxEpost.Text);
+            new SqliteDataAccess().SaveStudent(student);
 
-        private void btnSubmitRemove_Click(object sender, EventArgs e)
-        {
-            string id = tBoxID.Text;
-
-            //remove student(id)
-        }
-
-        private void btnLoad_Click(object sender, EventArgs e)
-        {
-
+            Home home = new Home();
+            this.Close();
         }
     }
 }

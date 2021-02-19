@@ -6,17 +6,26 @@ using System.Threading.Tasks;
 
 namespace DatabasUppgift
 {
-    public class PersonModel
+    public abstract class PersonModel
     {
-        public string first_name { get; set; }
-        public string last_name { get; set; }
+        public string first_name { get; private set; }
+        public string last_name { get; private set; }
 
-        public string adress { get; set; }
-        public string phone_number { get; set; }
-        public string e_ail { get; set; }
+        public string adress { get; private set; }
+        public string phone_number { get; private set; }
+        public string e_mail { get; private set; }
 
-        public int id { get; set; }
+        public int id { get; private set; }
 
+        public PersonModel(int id, string first_name, string last_name, string adress, string phone_number, string e_mail)
+        {
+            this.id = id;
+            this.first_name = first_name;
+            this.last_name = last_name;
+            this.adress = adress;
+            this.phone_number = phone_number;
+            this.e_mail = e_mail;
+        }
 
         public string FullName
         {
