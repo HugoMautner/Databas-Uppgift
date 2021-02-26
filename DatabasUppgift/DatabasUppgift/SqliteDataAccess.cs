@@ -29,6 +29,14 @@ namespace DatabasUppgift
             }
         }
 
+        public void RemoveGuardian(int id)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("DELETE FROM guardian " +
+                    "WHERE id = '" + id + "'");
+            }
+        }
 
         public static List<StudentModel> LoadStudents()
         {
@@ -36,6 +44,16 @@ namespace DatabasUppgift
             {
                 var result = cnn.Query<StudentModel>(
                     "SELECT * FROM student", new DynamicParameters());
+
+                return result.ToList();
+            }
+        }
+        public static List<GuardianModel> LoadGuardians()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var result = cnn.Query<GuardianModel>(
+                    "SELECT * FROM guardian", new DynamicParameters());
 
                 return result.ToList();
             }

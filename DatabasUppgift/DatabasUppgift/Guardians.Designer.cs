@@ -269,7 +269,7 @@
             // 
             // pnlOptions
             // 
-            this.pnlOptions.Location = new System.Drawing.Point(944, 327);
+            this.pnlOptions.Location = new System.Drawing.Point(942, 331);
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.Size = new System.Drawing.Size(265, 41);
             this.pnlOptions.TabIndex = 33;
@@ -282,6 +282,7 @@
             this.btnRemove.TabIndex = 32;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnChange
             // 
@@ -291,6 +292,7 @@
             this.btnChange.TabIndex = 31;
             this.btnChange.Text = "Change";
             this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
             // Guardians
             // 

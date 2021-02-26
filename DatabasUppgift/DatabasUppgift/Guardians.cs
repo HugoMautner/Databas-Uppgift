@@ -14,6 +14,8 @@ namespace DatabasUppgift
 {
     public partial class Guardians : Form
     {
+        int id;
+
         public Guardians()
         {
             InitializeComponent();
@@ -37,11 +39,10 @@ namespace DatabasUppgift
         {
             try
             {
-                int id = Int32.Parse(tBoxID.Text);
-                //ändra till .LoadGuardians()
-                var guardians = SqliteDataAccess.LoadStudents();
+                id = Int32.Parse(tBoxID.Text);
+                var guardians = SqliteDataAccess.LoadGuardians();
 
-                foreach (StudentModel gm in guardians)
+                foreach (GuardianModel gm in guardians)
                 {
                     if (id == gm.id)
                     {
@@ -73,5 +74,15 @@ namespace DatabasUppgift
                 lBoxGuardians.Items.Add(s.first_name);
         }
 
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            new SqliteDataAccess().RemoveGuardian(id);
+            MessageBox.Show("Guardian with ID " + id + "deleted", "Success", MessageBoxButtons.OK);
+        }
     }
 }
