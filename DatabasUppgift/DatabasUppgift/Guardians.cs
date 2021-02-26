@@ -46,7 +46,8 @@ namespace DatabasUppgift
                 {
                     if (id == gm.id)
                     {
-                        Debug.WriteLine("Guardian found!");
+                        MessageBox.Show("Found " + gm.FullName + " with id: " + gm.id, "Found guardian!", MessageBoxButtons.OK);
+                        tb_DisplayGuardian.Text = gm.FullName;
                         pnlOptions.Hide();
                         return;
                     }
@@ -69,20 +70,26 @@ namespace DatabasUppgift
 
             lBoxGuardians.Items.Clear();
 
-            var students = SqliteDataAccess.LoadStudents();
-            foreach (StudentModel s in students)
-                lBoxGuardians.Items.Add(s.first_name);
+            var guardians = SqliteDataAccess.LoadGuardians();
+            foreach (GuardianModel g in guardians)
+                lBoxGuardians.Items.Add(g.first_name);
         }
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-
+            pnlNewDetails.Hide();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
             new SqliteDataAccess().RemoveGuardian(id);
             MessageBox.Show("Guardian with ID " + id + "deleted", "Success", MessageBoxButtons.OK);
+        }
+
+        private void btn_SubmitChange_Click(object sender, EventArgs e)
+        {
+            GuardianModel guardian = new GuardianModel(id, tb_ChangeFirstName.Text, tb_ChangeLastName.Text, tb_ChangeAdress.Text, tb_ChangePhoneNumber.Text, tb_ChangeEpost.Text);
+            new SqliteDataAccess().ChangeGuardian(guardian);
         }
     }
 }

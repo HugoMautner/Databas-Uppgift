@@ -38,9 +38,6 @@ namespace DatabasUppgift
             }
         }
 
-
-
-
         public void ChangeStudent(StudentModel student)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -51,7 +48,15 @@ namespace DatabasUppgift
             }
         }
 
-
+        public void ChangeGuardian(GuardianModel guardian)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("UPDATE guardian " +
+                    "SET first_name = '" + guardian.first_name + "', last_name = '" + guardian.last_name + "', adress = '" + guardian.adress + "', phone_number = '" + guardian.phone_number + "', e_mail = '" + guardian.e_mail + "'"
+                    + "WHERE id = " + guardian.id);
+            }
+        }
 
         public static List<StudentModel> LoadStudents()
         {

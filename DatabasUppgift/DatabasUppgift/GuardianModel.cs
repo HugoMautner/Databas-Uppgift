@@ -12,5 +12,9 @@ namespace DatabasUppgift
         {
 
         }
+        public GuardianModel()
+        {
+
+        }
     }
 }

@@ -53,19 +53,37 @@
             this.pnlOptions = new System.Windows.Forms.Panel();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnChange = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pnlNewDetails = new System.Windows.Forms.Panel();
+            this.tb_ChangeLastName = new System.Windows.Forms.TextBox();
+            this.btn_SubmitChange = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tb_ChangeEpost = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tb_ChangePhoneNumber = new System.Windows.Forms.TextBox();
+            this.tb_ChangeAdress = new System.Windows.Forms.TextBox();
+            this.tb_ChangeFirstName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tb_DisplayGuardian = new System.Windows.Forms.TextBox();
             this.gBoxAddGuardian.SuspendLayout();
             this.gBoxGuardians.SuspendLayout();
             this.gBoxFindGuardian.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Title
             // 
+            this.Title.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Title.Enabled = false;
             this.Title.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Title.Location = new System.Drawing.Point(396, 12);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(529, 97);
+            this.Title.Size = new System.Drawing.Size(529, 90);
             this.Title.TabIndex = 3;
             this.Title.Text = "Softschool";
             this.Title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -269,14 +287,14 @@
             // 
             // pnlOptions
             // 
-            this.pnlOptions.Location = new System.Drawing.Point(942, 331);
+            this.pnlOptions.Location = new System.Drawing.Point(933, 315);
             this.pnlOptions.Name = "pnlOptions";
-            this.pnlOptions.Size = new System.Drawing.Size(265, 41);
+            this.pnlOptions.Size = new System.Drawing.Size(282, 118);
             this.pnlOptions.TabIndex = 33;
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(1092, 307);
+            this.btnRemove.Location = new System.Drawing.Point(156, 73);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(106, 41);
             this.btnRemove.TabIndex = 32;
@@ -286,7 +304,7 @@
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(942, 307);
+            this.btnChange.Location = new System.Drawing.Point(6, 73);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(106, 41);
             this.btnChange.TabIndex = 31;
@@ -294,14 +312,152 @@
             this.btnChange.UseVisualStyleBackColor = true;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pnlNewDetails);
+            this.groupBox1.Controls.Add(this.tb_ChangeLastName);
+            this.groupBox1.Controls.Add(this.btn_SubmitChange);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.tb_ChangeEpost);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tb_ChangePhoneNumber);
+            this.groupBox1.Controls.Add(this.tb_ChangeAdress);
+            this.groupBox1.Controls.Add(this.tb_ChangeFirstName);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Location = new System.Drawing.Point(933, 523);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(282, 219);
+            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Enter new guardian details";
+            // 
+            // pnlNewDetails
+            // 
+            this.pnlNewDetails.Location = new System.Drawing.Point(0, 0);
+            this.pnlNewDetails.Name = "pnlNewDetails";
+            this.pnlNewDetails.Size = new System.Drawing.Size(282, 224);
+            this.pnlNewDetails.TabIndex = 10;
+            // 
+            // tb_ChangeLastName
+            // 
+            this.tb_ChangeLastName.Location = new System.Drawing.Point(106, 61);
+            this.tb_ChangeLastName.Name = "tb_ChangeLastName";
+            this.tb_ChangeLastName.Size = new System.Drawing.Size(170, 20);
+            this.tb_ChangeLastName.TabIndex = 9;
+            // 
+            // btn_SubmitChange
+            // 
+            this.btn_SubmitChange.Location = new System.Drawing.Point(201, 190);
+            this.btn_SubmitChange.Name = "btn_SubmitChange";
+            this.btn_SubmitChange.Size = new System.Drawing.Size(75, 23);
+            this.btn_SubmitChange.TabIndex = 5;
+            this.btn_SubmitChange.Text = "Submit";
+            this.btn_SubmitChange.UseVisualStyleBackColor = true;
+            this.btn_SubmitChange.Click += new System.EventHandler(this.btn_SubmitChange_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Last Name";
+            // 
+            // tb_ChangeEpost
+            // 
+            this.tb_ChangeEpost.Location = new System.Drawing.Point(106, 153);
+            this.tb_ChangeEpost.Name = "tb_ChangeEpost";
+            this.tb_ChangeEpost.Size = new System.Drawing.Size(170, 20);
+            this.tb_ChangeEpost.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "E-post";
+            // 
+            // tb_ChangePhoneNumber
+            // 
+            this.tb_ChangePhoneNumber.Location = new System.Drawing.Point(106, 123);
+            this.tb_ChangePhoneNumber.Name = "tb_ChangePhoneNumber";
+            this.tb_ChangePhoneNumber.Size = new System.Drawing.Size(170, 20);
+            this.tb_ChangePhoneNumber.TabIndex = 5;
+            // 
+            // tb_ChangeAdress
+            // 
+            this.tb_ChangeAdress.Location = new System.Drawing.Point(106, 93);
+            this.tb_ChangeAdress.Name = "tb_ChangeAdress";
+            this.tb_ChangeAdress.Size = new System.Drawing.Size(170, 20);
+            this.tb_ChangeAdress.TabIndex = 4;
+            // 
+            // tb_ChangeFirstName
+            // 
+            this.tb_ChangeFirstName.Location = new System.Drawing.Point(106, 30);
+            this.tb_ChangeFirstName.Name = "tb_ChangeFirstName";
+            this.tb_ChangeFirstName.Size = new System.Drawing.Size(170, 20);
+            this.tb_ChangeFirstName.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Telefonnummer";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Adress";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "First Name";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tb_DisplayGuardian);
+            this.groupBox2.Controls.Add(this.btnChange);
+            this.groupBox2.Controls.Add(this.btnRemove);
+            this.groupBox2.Location = new System.Drawing.Point(933, 315);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(282, 122);
+            this.groupBox2.TabIndex = 34;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Choose action for";
+            // 
+            // tb_DisplayGuardian
+            // 
+            this.tb_DisplayGuardian.Enabled = false;
+            this.tb_DisplayGuardian.Location = new System.Drawing.Point(6, 19);
+            this.tb_DisplayGuardian.Name = "tb_DisplayGuardian";
+            this.tb_DisplayGuardian.Size = new System.Drawing.Size(270, 20);
+            this.tb_DisplayGuardian.TabIndex = 33;
+            // 
             // Guardians
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1419, 845);
             this.Controls.Add(this.pnlOptions);
-            this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.btnChange);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gBoxFindGuardian);
             this.Controls.Add(this.gBoxGuardians);
             this.Controls.Add(this.gBoxAddGuardian);
@@ -316,6 +472,10 @@
             this.gBoxGuardians.ResumeLayout(false);
             this.gBoxFindGuardian.ResumeLayout(false);
             this.gBoxFindGuardian.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,5 +508,20 @@
         private System.Windows.Forms.Panel pnlOptions;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tb_ChangeLastName;
+        private System.Windows.Forms.Button btn_SubmitChange;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tb_ChangeEpost;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tb_ChangePhoneNumber;
+        private System.Windows.Forms.TextBox tb_ChangeAdress;
+        private System.Windows.Forms.TextBox tb_ChangeFirstName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel pnlNewDetails;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox tb_DisplayGuardian;
     }
 }
