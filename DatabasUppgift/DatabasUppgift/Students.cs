@@ -82,6 +82,15 @@ namespace DatabasUppgift
         }
 
 
+
+        private void BtnRemove_Click(object sender, EventArgs e)
+        {
+            //Int32.Parse(tBoxID.Text);
+            new SqliteDataAccess().RemoveStudent(2);
+        }
+    
+
+
     private void LoadStudents()
         {
             lBoxStudents.Items.Clear();
