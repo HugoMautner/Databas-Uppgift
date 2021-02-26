@@ -38,6 +38,21 @@ namespace DatabasUppgift
             }
         }
 
+
+
+
+        public void ChangeStudent(StudentModel student)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("UPDATE student " +
+                    "SET first_name = '" + student.first_name + "', last_name = '" + student.last_name + "', adress = '" + student.adress + "', phone_number = '" + student.phone_number + "', e_mail = '" + student.e_mail + "'"
+                    + "WHERE id = " + student.id);
+            }
+        }
+
+
+
         public static List<StudentModel> LoadStudents()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))

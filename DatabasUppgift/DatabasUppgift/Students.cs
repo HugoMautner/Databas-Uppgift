@@ -17,6 +17,8 @@ namespace DatabasUppgift
 {
     public partial class Students : Form
     {
+        int id = -1;
+
         public Students()
         {
             InitializeComponent();
@@ -52,7 +54,7 @@ namespace DatabasUppgift
         {
             try
             {
-                int id = Int32.Parse(tBoxID.Text);
+                id = Int32.Parse(tBoxID.Text);
                 var students = SqliteDataAccess.LoadStudents();
 
                 foreach (StudentModel sm in students)
@@ -68,12 +70,16 @@ namespace DatabasUppgift
             catch (Exception)
             {
                 MessageBox.Show("Invalid number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                id = -1;
                 tBoxID.Clear();
+                pnlOptions.Show();
                 return;
             }
 
             MessageBox.Show("Student not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            id = -1;
             tBoxID.Clear();
+            pnlOptions.Show();
         }
 
         private void BtnLoad_Click(object sender, EventArgs e)
@@ -83,11 +89,10 @@ namespace DatabasUppgift
 
 
 
-        private void BtnRemove_Click(object sender, EventArgs e)
+        /*private void BtnRemove_Click(object sender, EventArgs e)
         {
-            //Int32.Parse(tBoxID.Text);
-            new SqliteDataAccess().RemoveStudent(2);
-        }
+            new SqliteDataAccess().RemoveStudent(id);
+        }*/
     
 
 
@@ -99,5 +104,15 @@ namespace DatabasUppgift
                 lBoxStudents.Items.Add(s.NameAndId);
         }
 
+        private void Btn_SubmitChange_Click(object sender, EventArgs e)
+        {
+            StudentModel student = new StudentModel(id, tb_ChangeFirstName.Text, tb_ChangeLastName.Text, tb_ChangeAdress.Text, tb_ChangePhoneNumber.Text, tb_ChangeEpost.Text);
+            new SqliteDataAccess().ChangeStudent(student);
+        }
+
+        private void BtnRemove_Click_1(object sender, EventArgs e)
+        {
+            new SqliteDataAccess().RemoveStudent(id);
+        }
     }
 }

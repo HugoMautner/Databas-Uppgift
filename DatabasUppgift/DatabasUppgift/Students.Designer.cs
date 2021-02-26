@@ -53,9 +53,22 @@
             this.btnChange = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.pnlOptions = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tb_ChangeLastName = new System.Windows.Forms.TextBox();
+            this.btn_SubmitChange = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tb_ChangeEpost = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tb_ChangePhoneNumber = new System.Windows.Forms.TextBox();
+            this.tb_ChangeAdress = new System.Windows.Forms.TextBox();
+            this.tb_ChangeFirstName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.gBoxAdd.SuspendLayout();
             this.gBoxRemove.SuspendLayout();
             this.gBoxStudents.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Title
@@ -313,6 +326,7 @@
             this.btnRemove.TabIndex = 27;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.BtnRemove_Click_1);
             // 
             // pnlOptions
             // 
@@ -322,11 +336,135 @@
             this.pnlOptions.Size = new System.Drawing.Size(353, 50);
             this.pnlOptions.TabIndex = 28;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tb_ChangeLastName);
+            this.groupBox1.Controls.Add(this.btn_SubmitChange);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.tb_ChangeEpost);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.tb_ChangePhoneNumber);
+            this.groupBox1.Controls.Add(this.tb_ChangeAdress);
+            this.groupBox1.Controls.Add(this.tb_ChangeFirstName);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Location = new System.Drawing.Point(1221, 480);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(376, 270);
+            this.groupBox1.TabIndex = 29;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Enter student to add";
+            // 
+            // tb_ChangeLastName
+            // 
+            this.tb_ChangeLastName.Location = new System.Drawing.Point(141, 75);
+            this.tb_ChangeLastName.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_ChangeLastName.Name = "tb_ChangeLastName";
+            this.tb_ChangeLastName.Size = new System.Drawing.Size(225, 22);
+            this.tb_ChangeLastName.TabIndex = 9;
+            // 
+            // btn_SubmitChange
+            // 
+            this.btn_SubmitChange.Location = new System.Drawing.Point(268, 234);
+            this.btn_SubmitChange.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_SubmitChange.Name = "btn_SubmitChange";
+            this.btn_SubmitChange.Size = new System.Drawing.Size(100, 28);
+            this.btn_SubmitChange.TabIndex = 5;
+            this.btn_SubmitChange.Text = "Submit";
+            this.btn_SubmitChange.UseVisualStyleBackColor = true;
+            this.btn_SubmitChange.Click += new System.EventHandler(this.Btn_SubmitChange_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 79);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 17);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Last Name";
+            // 
+            // tb_ChangeEpost
+            // 
+            this.tb_ChangeEpost.Location = new System.Drawing.Point(141, 188);
+            this.tb_ChangeEpost.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_ChangeEpost.Name = "tb_ChangeEpost";
+            this.tb_ChangeEpost.Size = new System.Drawing.Size(225, 22);
+            this.tb_ChangeEpost.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 192);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "E-post";
+            // 
+            // tb_ChangePhoneNumber
+            // 
+            this.tb_ChangePhoneNumber.Location = new System.Drawing.Point(141, 151);
+            this.tb_ChangePhoneNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_ChangePhoneNumber.Name = "tb_ChangePhoneNumber";
+            this.tb_ChangePhoneNumber.Size = new System.Drawing.Size(225, 22);
+            this.tb_ChangePhoneNumber.TabIndex = 5;
+            // 
+            // tb_ChangeAdress
+            // 
+            this.tb_ChangeAdress.Location = new System.Drawing.Point(141, 114);
+            this.tb_ChangeAdress.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_ChangeAdress.Name = "tb_ChangeAdress";
+            this.tb_ChangeAdress.Size = new System.Drawing.Size(225, 22);
+            this.tb_ChangeAdress.TabIndex = 4;
+            // 
+            // tb_ChangeFirstName
+            // 
+            this.tb_ChangeFirstName.Location = new System.Drawing.Point(141, 37);
+            this.tb_ChangeFirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_ChangeFirstName.Name = "tb_ChangeFirstName";
+            this.tb_ChangeFirstName.Size = new System.Drawing.Size(225, 22);
+            this.tb_ChangeFirstName.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 155);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(107, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Telefonnummer";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 118);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Adress";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 41);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 17);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "First Name";
+            // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1892, 1040);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlOptions);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnChange);
@@ -345,6 +483,8 @@
             this.gBoxRemove.ResumeLayout(false);
             this.gBoxRemove.PerformLayout();
             this.gBoxStudents.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,5 +517,17 @@
         private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Panel pnlOptions;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tb_ChangeLastName;
+        private System.Windows.Forms.Button btn_SubmitChange;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tb_ChangeEpost;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tb_ChangePhoneNumber;
+        private System.Windows.Forms.TextBox tb_ChangeAdress;
+        private System.Windows.Forms.TextBox tb_ChangeFirstName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
