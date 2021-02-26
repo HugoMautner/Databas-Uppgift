@@ -55,16 +55,12 @@ namespace DatabasUppgift
             try
             {
                 id = Int32.Parse(tBoxID.Text);
-                var students = SqliteDataAccess.LoadStudents();
 
-                foreach (StudentModel sm in students)
+                //DEN HÄR FUNKAR INTE AV NÅGON ANELDNING SEND HELP
+                if (GetStudent(id) != null)
                 {
-                    if (id == sm.id)
-                    {
-                        Debug.WriteLine("Student found!");
-                        pnlOptions.Hide();
-                        return;
-                    }
+                    Debug.WriteLine("Student found!");
+                    pnlOptions.Hide();
                 }
             }
             catch (Exception)
@@ -89,14 +85,8 @@ namespace DatabasUppgift
 
 
 
-        /*private void BtnRemove_Click(object sender, EventArgs e)
-        {
-            new SqliteDataAccess().RemoveStudent(id);
-        }*/
-    
 
-
-    private void LoadStudents()
+        private void LoadStudents()
         {
             lBoxStudents.Items.Clear();
             var students = SqliteDataAccess.LoadStudents();
@@ -104,9 +94,34 @@ namespace DatabasUppgift
                 lBoxStudents.Items.Add(s.NameAndId);
         }
 
+        private StudentModel GetStudent(int id)
+        {
+            var students = SqliteDataAccess.LoadStudents();
+
+            foreach (StudentModel student in students)
+            {
+                if (id == student.id)
+                {
+                    return student;
+                }
+            }
+
+            return null;
+        }
+
+
+
         private void Btn_SubmitChange_Click(object sender, EventArgs e)
         {
-            StudentModel student = new StudentModel(id, tb_ChangeFirstName.Text, tb_ChangeLastName.Text, tb_ChangeAdress.Text, tb_ChangePhoneNumber.Text, tb_ChangeEpost.Text);
+            StudentModel studentToChange = GetStudent(id);
+            StudentModel student = new StudentModel(
+                1, 
+                tb_ChangeFirstName.Text != "" ? tb_ChangeFirstName.Text : studentToChange.first_name,
+                tb_ChangeLastName.Text != "" ? tb_ChangeLastName.Text : studentToChange.last_name,
+                tb_ChangeAdress.Text != "" ? tb_ChangeAdress.Text : studentToChange.adress,
+                tb_ChangePhoneNumber.Text != "" ? tb_ChangePhoneNumber.Text : studentToChange.phone_number,
+                tb_ChangeEpost.Text != "" ? tb_ChangeEpost.Text : studentToChange.e_mail);
+            
             new SqliteDataAccess().ChangeStudent(student);
         }
 
