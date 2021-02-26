@@ -29,9 +29,14 @@ namespace DatabasUppgift
             }
         }
 
-
-
-
+        public void RemoveGuardian(int id)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("DELETE FROM guardian " +
+                    "WHERE id = '" + id + "'");
+            }
+        }
 
         public void ChangeStudent(StudentModel student)
         {
@@ -43,7 +48,15 @@ namespace DatabasUppgift
             }
         }
 
-
+        public void ChangeGuardian(GuardianModel guardian)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("UPDATE guardian " +
+                    "SET first_name = '" + guardian.first_name + "', last_name = '" + guardian.last_name + "', adress = '" + guardian.adress + "', phone_number = '" + guardian.phone_number + "', e_mail = '" + guardian.e_mail + "'"
+                    + "WHERE id = " + guardian.id);
+            }
+        }
 
         public static List<StudentModel> LoadStudents()
         {
@@ -51,6 +64,16 @@ namespace DatabasUppgift
             {
                 var result = cnn.Query<StudentModel>(
                     "SELECT * FROM student", new DynamicParameters());
+
+                return result.ToList();
+            }
+        }
+        public static List<GuardianModel> LoadGuardians()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var result = cnn.Query<GuardianModel>(
+                    "SELECT * FROM guardian", new DynamicParameters());
 
                 return result.ToList();
             }

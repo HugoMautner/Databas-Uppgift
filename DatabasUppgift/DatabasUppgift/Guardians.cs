@@ -14,6 +14,8 @@ namespace DatabasUppgift
 {
     public partial class Guardians : Form
     {
+        int id;
+
         public Guardians()
         {
             InitializeComponent();
@@ -37,15 +39,15 @@ namespace DatabasUppgift
         {
             try
             {
-                int id = Int32.Parse(tBoxID.Text);
-                //ändra till .LoadGuardians()
-                var guardians = SqliteDataAccess.LoadStudents();
+                id = Int32.Parse(tBoxID.Text);
+                var guardians = SqliteDataAccess.LoadGuardians();
 
-                foreach (StudentModel gm in guardians)
+                foreach (GuardianModel gm in guardians)
                 {
                     if (id == gm.id)
                     {
-                        Debug.WriteLine("Guardian found!");
+                        MessageBox.Show("Found " + gm.FullName + " with id: " + gm.id, "Found guardian!", MessageBoxButtons.OK);
+                        tb_DisplayGuardian.Text = gm.FullName;
                         pnlOptions.Hide();
                         return;
                     }
@@ -68,10 +70,26 @@ namespace DatabasUppgift
 
             lBoxGuardians.Items.Clear();
 
-            var students = SqliteDataAccess.LoadStudents();
-            foreach (StudentModel s in students)
-                lBoxGuardians.Items.Add(s.first_name);
+            var guardians = SqliteDataAccess.LoadGuardians();
+            foreach (GuardianModel g in guardians)
+                lBoxGuardians.Items.Add(g.first_name);
         }
 
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            pnlNewDetails.Hide();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            new SqliteDataAccess().RemoveGuardian(id);
+            MessageBox.Show("Guardian with ID " + id + "deleted", "Success", MessageBoxButtons.OK);
+        }
+
+        private void btn_SubmitChange_Click(object sender, EventArgs e)
+        {
+            GuardianModel guardian = new GuardianModel(id, tb_ChangeFirstName.Text, tb_ChangeLastName.Text, tb_ChangeAdress.Text, tb_ChangePhoneNumber.Text, tb_ChangeEpost.Text);
+            new SqliteDataAccess().ChangeGuardian(guardian);
+        }
     }
 }
