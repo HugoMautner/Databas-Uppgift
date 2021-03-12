@@ -39,12 +39,17 @@ namespace DatabasUppgift
             }
         }
 
-        public string AllInfo
+        public string AllInfoText
         {
             get
             {
                 return id + " " + first_name + " " + last_name + " " + adress + " " + phone_number + " " + e_mail;
             }
+        }
+
+        public string[] AllChangeableInfoArr()
+        {
+            return new string[5] { first_name, last_name, adress, phone_number, e_mail };
         }
 
         public string NameAndId
