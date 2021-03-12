@@ -287,9 +287,9 @@
             // 
             // pnlOptions
             // 
-            this.pnlOptions.Location = new System.Drawing.Point(933, 315);
+            this.pnlOptions.Location = new System.Drawing.Point(927, 311);
             this.pnlOptions.Name = "pnlOptions";
-            this.pnlOptions.Size = new System.Drawing.Size(282, 118);
+            this.pnlOptions.Size = new System.Drawing.Size(298, 138);
             this.pnlOptions.TabIndex = 33;
             // 
             // btnRemove
@@ -314,7 +314,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pnlNewDetails);
             this.groupBox1.Controls.Add(this.tb_ChangeLastName);
             this.groupBox1.Controls.Add(this.btn_SubmitChange);
             this.groupBox1.Controls.Add(this.label1);
@@ -326,7 +325,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(933, 523);
+            this.groupBox1.Location = new System.Drawing.Point(933, 469);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(282, 219);
             this.groupBox1.TabIndex = 29;
@@ -335,9 +334,9 @@
             // 
             // pnlNewDetails
             // 
-            this.pnlNewDetails.Location = new System.Drawing.Point(0, 0);
+            this.pnlNewDetails.Location = new System.Drawing.Point(927, 464);
             this.pnlNewDetails.Name = "pnlNewDetails";
-            this.pnlNewDetails.Size = new System.Drawing.Size(282, 224);
+            this.pnlNewDetails.Size = new System.Drawing.Size(298, 235);
             this.pnlNewDetails.TabIndex = 10;
             // 
             // tb_ChangeLastName
@@ -455,6 +454,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1419, 845);
+            this.Controls.Add(this.pnlNewDetails);
             this.Controls.Add(this.pnlOptions);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
