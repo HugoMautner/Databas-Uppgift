@@ -42,12 +42,13 @@
             // 
             // Title
             // 
+            this.Title.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Title.Enabled = false;
             this.Title.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Title.Location = new System.Drawing.Point(396, 12);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(529, 97);
+            this.Title.Size = new System.Drawing.Size(529, 90);
             this.Title.TabIndex = 4;
             this.Title.Text = "Softschool";
             this.Title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
