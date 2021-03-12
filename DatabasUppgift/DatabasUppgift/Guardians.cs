@@ -66,13 +66,11 @@ namespace DatabasUppgift
 
         private void LoadGuardians()
         {
-            //Loading students, change to load guardians later
-
             lBoxGuardians.Items.Clear();
 
             var guardians = SqliteDataAccess.LoadGuardians();
             foreach (GuardianModel g in guardians)
-                lBoxGuardians.Items.Add(g.first_name);
+                lBoxGuardians.Items.Add(g.id + ", " + g.first_name);
         }
 
         private void btnChange_Click(object sender, EventArgs e)

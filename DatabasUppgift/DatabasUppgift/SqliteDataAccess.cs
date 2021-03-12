@@ -78,6 +78,16 @@ namespace DatabasUppgift
                 return result.ToList();
             }
         }
+        public static List<ClassModel> LoadClasses()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var result = cnn.Query<ClassModel>(
+                    "SELECT * FROM classes", new DynamicParameters());
+
+                return result.ToList();
+            }
+        }
 
         private static string LoadConnectionString(string id = "Default")
         {
