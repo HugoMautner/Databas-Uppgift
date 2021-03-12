@@ -27,55 +27,38 @@ namespace DatabasUppgift
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
-            var home = (Home)Tag;
-            home.Show();
-            Close();
+            GoBack();
         }
 
-        private void BtnSubmit_Click(object sender, EventArgs e)
+        private void BtnSubmitAdd_Click(object sender, EventArgs e)
         {
-            //lägg till error om saker inte går igenom
-            string firstName = tBoxFirstName.Text;
-            string lastName = tBoxLastName.Text;
-            string adress = tBoxAdress.Text;
-            string telenr = tBoxTelenr.Text;
-            string epost = tBoxEpost.Text;
+            if (tBoxFirstName.Text == "" || tBoxLastName.Text == "")
+            {
+                MessageBox.Show("First Name and Last Name must be filled in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             StudentModel student = new StudentModel(-1, tBoxFirstName.Text, 
                 tBoxLastName.Text, tBoxAdress.Text, tBoxTelenr.Text, tBoxEpost.Text);
             new SqliteDataAccess().SaveStudent(student);
 
-            var home = (Home)Tag;
-            home.Show();
-            Close();
+            LoadStudents();
         }
 
-        private void BtnSubmitRemove_Click_1(object sender, EventArgs e)
+        private void BtnSubmitId_Click(object sender, EventArgs e)
         {
-            try
-            {
-                id = Int32.Parse(tBoxID.Text);
+            id = ConvertToInt(tBoxID.Text);
 
-                //DEN HÄR FUNKAR INTE AV NÅGON ANELDNING SEND HELP
-                if (GetStudent(id) != null)
-                {
-                    Debug.WriteLine("Student found!");
-                    pnlOptions.Hide();
-                }
-            }
-            catch (Exception)
+            if (GetStudent(id) != null)
             {
-                MessageBox.Show("Invalid number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                id = -1;
+                pnlOptions.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid input", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tBoxID.Clear();
                 pnlOptions.Show();
-                return;
             }
-
-            MessageBox.Show("Student not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            id = -1;
-            tBoxID.Clear();
-            pnlOptions.Show();
         }
 
         private void BtnLoad_Click(object sender, EventArgs e)
@@ -83,8 +66,36 @@ namespace DatabasUppgift
             LoadStudents();
         }
 
+        private void Btn_SubmitChange_Click(object sender, EventArgs e)
+        {
+            if (tb_ChangeFirstName.Text == "" || tb_ChangeLastName.Text == "")
+            {
+                MessageBox.Show("First Name and Last Name must be filled in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            StudentModel student = new StudentModel(
+                id,
+                tb_ChangeFirstName.Text,
+                tb_ChangeLastName.Text,
+                tb_ChangeAdress.Text,
+                tb_ChangePhoneNumber.Text,
+                tb_ChangeEpost.Text);
 
 
+            new SqliteDataAccess().ChangeStudent(student);
+            LoadStudents();
+            pnlOptions.Show();
+        }
+
+        private void BtnRemove_Click_1(object sender, EventArgs e)
+        {
+            new SqliteDataAccess().RemoveStudent(id);
+            LoadStudents();
+        }
+
+
+        #region Hjälpmetoder
 
         private void LoadStudents()
         {
@@ -93,6 +104,7 @@ namespace DatabasUppgift
             foreach (StudentModel s in students)
                 lBoxStudents.Items.Add(s.NameAndId);
         }
+
 
         private StudentModel GetStudent(int id)
         {
@@ -110,24 +122,43 @@ namespace DatabasUppgift
         }
 
 
-
-        private void Btn_SubmitChange_Click(object sender, EventArgs e)
+        private int ConvertToInt(string id)
         {
-            StudentModel studentToChange = GetStudent(id);
-            StudentModel student = new StudentModel(
-                1, 
-                tb_ChangeFirstName.Text != "" ? tb_ChangeFirstName.Text : studentToChange.first_name,
-                tb_ChangeLastName.Text != "" ? tb_ChangeLastName.Text : studentToChange.last_name,
-                tb_ChangeAdress.Text != "" ? tb_ChangeAdress.Text : studentToChange.adress,
-                tb_ChangePhoneNumber.Text != "" ? tb_ChangePhoneNumber.Text : studentToChange.phone_number,
-                tb_ChangeEpost.Text != "" ? tb_ChangeEpost.Text : studentToChange.e_mail);
-            
-            new SqliteDataAccess().ChangeStudent(student);
+            try
+            {
+                return Int32.Parse(id);
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
         }
 
-        private void BtnRemove_Click_1(object sender, EventArgs e)
+        private void GoBack()
         {
-            new SqliteDataAccess().RemoveStudent(id);
+            var home = (Home)Tag;
+            home.Show();
+            Close();
+        }
+
+
+        #endregion
+
+        private void BtnChange_Click(object sender, EventArgs e)
+        {
+            StudentModel studentToChange = GetStudent(id);
+            int count = 0;
+
+            foreach (Control c in gBoxChange.Controls)
+            {
+                TextBox t = c as TextBox;
+
+                if (t != null)
+                {
+                    t.Text = studentToChange.AllChangeableInfoArr()[count];
+                    count++;
+                }
+            }
         }
     }
 }
