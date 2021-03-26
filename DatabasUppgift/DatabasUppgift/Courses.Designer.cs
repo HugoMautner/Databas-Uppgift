@@ -115,10 +115,14 @@
             // 
             // tBoxName
             // 
+            this.tBoxName.ForeColor = System.Drawing.Color.DimGray;
             this.tBoxName.Location = new System.Drawing.Point(106, 30);
             this.tBoxName.Name = "tBoxName";
             this.tBoxName.Size = new System.Drawing.Size(170, 20);
             this.tBoxName.TabIndex = 3;
+            this.tBoxName.Text = "Hugibert";
+            this.tBoxName.Enter += new System.EventHandler(this.tBoxName_Enter);
+            this.tBoxName.Leave += new System.EventHandler(this.tBoxName_Leave);
             // 
             // lblName
             // 
