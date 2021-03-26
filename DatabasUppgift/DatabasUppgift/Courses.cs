@@ -23,5 +23,22 @@ namespace DatabasUppgift
             home.Show();
             Close();
         }
+
+        private void tBoxName_Enter(object sender, EventArgs e)
+        {
+            if (tBoxName.Text == "Hugibert")
+            {
+                tBoxName.Text = "";
+                tBoxName.ForeColor = Color.Black;
+            }
+        }
+        private void tBoxName_Leave(object sender, EventArgs e)
+        {
+            if (tBoxName.Text == "")
+            {
+                tBoxName.Text = "Hugibert";
+                tBoxName.ForeColor = Color.DimGray;
+            }
+        }
     }
 }
