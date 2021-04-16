@@ -283,7 +283,7 @@
             // 
             // pnlNewDetails
             // 
-            this.pnlNewDetails.Location = new System.Drawing.Point(575, 488);
+            this.pnlNewDetails.Location = new System.Drawing.Point(575, 499);
             this.pnlNewDetails.Name = "pnlNewDetails";
             this.pnlNewDetails.Size = new System.Drawing.Size(297, 235);
             this.pnlNewDetails.TabIndex = 10;
