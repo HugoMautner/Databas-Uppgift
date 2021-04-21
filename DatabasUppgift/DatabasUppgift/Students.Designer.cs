@@ -51,7 +51,6 @@
             this.lBoxStudents = new System.Windows.Forms.ListBox();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnChange = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.gBoxAdd.SuspendLayout();
             this.gBoxStudents.SuspendLayout();
             this.SuspendLayout();
@@ -290,22 +289,11 @@
             this.btnChange.Size = new System.Drawing.Size(75, 23);
             this.btnChange.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(967, 664);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1892, 1040);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.gBoxStudents);
             this.Controls.Add(this.gBoxRemove);
@@ -350,6 +338,5 @@
         private System.Windows.Forms.ListBox lBoxStudents;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnChange;
-        private System.Windows.Forms.Button button1;
     }
 }

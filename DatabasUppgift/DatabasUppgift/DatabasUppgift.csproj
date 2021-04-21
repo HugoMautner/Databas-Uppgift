@@ -86,6 +86,7 @@
     <Compile Include="Courses.Designer.cs">
       <DependentUpon>Courses.cs</DependentUpon>
     </Compile>
+    <Compile Include="GuardianRegistration.cs" />
     <Compile Include="StudentDefine.cs">
       <SubType>Form</SubType>
     </Compile>

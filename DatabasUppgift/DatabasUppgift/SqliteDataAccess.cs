@@ -18,7 +18,7 @@ namespace DatabasUppgift
                     "VALUES (@first_name, @last_name, @adress, @phone_number, @e_mail)", student);
             }
         }
-        public void SaveGuardian(GuardianModel guardian)
+        public static void SaveGuardian(GuardianModel guardian)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -27,7 +27,7 @@ namespace DatabasUppgift
             }
         }
 
-        public void SaveRegistration(StudentModel student)
+        public static void SaveRegistration(StudentModel student)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -38,6 +38,10 @@ namespace DatabasUppgift
 
         public static void RemoveStudent(int id)
         {
+            StudentModel sm = GetStudent(id);
+
+            RemoveGuardianRegistration(sm);
+
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 cnn.Execute("DELETE FROM students " +
@@ -47,10 +51,14 @@ namespace DatabasUppgift
 
         public static void RemoveGuardian(int id)
         {
+            GuardianModel gm = GetGuardian(id);
+
+            RemoveGuardianRegistration(gm);
+
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 cnn.Execute("DELETE FROM guardians " +
-                    "WHERE id = '" + id + "'");
+                    "WHERE id = '" + gm.id + "'");
             }
         }
 
@@ -104,6 +112,73 @@ namespace DatabasUppgift
                 return result.ToList();
             }
         }
+
+
+        
+
+        public static void SaveGuardianRegistration(GuardianRegistration gr)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("INSERT INTO registrations (student_id, guardian_id) " +
+                    "VALUES (@student_id, @guardian_id)", gr);
+            }
+        }
+
+
+
+
+        private static void RemoveGuardianRegistration(GuardianModel gm)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("DELETE FROM registrations " +
+                    "WHERE guardian_id = '" + gm.id + "'");
+            }
+        }
+
+        private static void RemoveGuardianRegistration(StudentModel sm)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("DELETE FROM registrations " +
+                    "WHERE student_id = '" + sm.id + "'");
+            }
+        }
+
+
+
+
+
+        private static GuardianModel GetGuardian(int id)
+        {
+            foreach (GuardianModel gm in LoadGuardians())
+            {
+                if (gm.id == id)
+                {
+                    return gm;
+                }
+            }
+
+            return null;
+        }
+
+        private static StudentModel GetStudent(int id)
+        {
+            foreach (StudentModel sm in LoadStudents())
+            {
+                if (sm.id == id)
+                {
+                    return sm;
+                }
+            }
+
+            return null;
+        }
+
+
+
+
 
         private static string LoadConnectionString(string id = "Default")
         {

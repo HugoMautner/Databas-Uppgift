@@ -33,7 +33,10 @@ namespace DatabasUppgift
         }
         private void btnDefineStudent_Click(object sender, EventArgs e)
         {
-            //Go to define student form
+            StudentDefine sd = new StudentDefine();
+            sd.Tag = this;
+            sd.Show(this);
+            Hide();
         }
 
         private void btnAddGuardian_Click(object sender, EventArgs e)

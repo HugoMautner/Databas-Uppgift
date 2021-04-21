@@ -64,6 +64,7 @@
             this.tbGuardianId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbStudentInformation = new System.Windows.Forms.TextBox();
+            this.pnlGuardian = new System.Windows.Forms.Panel();
             this.gBoxChange.SuspendLayout();
             this.gBoxRemove.SuspendLayout();
             this.gbStudents.SuspendLayout();
@@ -75,7 +76,7 @@
             // 
             // pnlChange
             // 
-            this.pnlChange.Location = new System.Drawing.Point(455, 407);
+            this.pnlChange.Location = new System.Drawing.Point(435, 392);
             this.pnlChange.Name = "pnlChange";
             this.pnlChange.Size = new System.Drawing.Size(423, 285);
             this.pnlChange.TabIndex = 36;
@@ -375,6 +376,7 @@
             this.btnAddGuardian.TabIndex = 41;
             this.btnAddGuardian.Text = "Add Guardian";
             this.btnAddGuardian.UseVisualStyleBackColor = true;
+            this.btnAddGuardian.Click += new System.EventHandler(this.BtnAddGuardian_Click);
             // 
             // btnAddCourse
             // 
@@ -388,7 +390,7 @@
             // 
             // pnlOptions
             // 
-            this.pnlOptions.Location = new System.Drawing.Point(51, 177);
+            this.pnlOptions.Location = new System.Drawing.Point(62, 177);
             this.pnlOptions.Margin = new System.Windows.Forms.Padding(4);
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.Size = new System.Drawing.Size(353, 187);
@@ -445,11 +447,19 @@
             this.tbStudentInformation.Size = new System.Drawing.Size(367, 320);
             this.tbStudentInformation.TabIndex = 44;
             // 
+            // pnlGuardian
+            // 
+            this.pnlGuardian.Location = new System.Drawing.Point(51, 382);
+            this.pnlGuardian.Name = "pnlGuardian";
+            this.pnlGuardian.Size = new System.Drawing.Size(376, 160);
+            this.pnlGuardian.TabIndex = 0;
+            // 
             // StudentDefine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 849);
+            this.Controls.Add(this.pnlGuardian);
             this.Controls.Add(this.tbStudentInformation);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnlOptions);
@@ -520,5 +530,6 @@
         private System.Windows.Forms.TextBox tbGuardianId;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbStudentInformation;
+        private System.Windows.Forms.Panel pnlGuardian;
     }
 }

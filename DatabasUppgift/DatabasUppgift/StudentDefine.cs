@@ -104,14 +104,16 @@ namespace DatabasUppgift
 
             if (GetGuardian(guardianId) != null)
             {
+                GuardianRegistration gr = new GuardianRegistration(-1, id, guardianId);
+                SqliteDataAccess.SaveGuardianRegistration(gr);
+
+                ShowAllPanels();
                 pnlOptions.Hide();
             }
             else
             {
                 MessageBox.Show("Invalid input", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tBoxID.Clear();
-                pnlOptions.Show();
-                pnlChange.Show();
+                tbGuardianId.Clear();
             }
         }
 
@@ -209,8 +211,12 @@ namespace DatabasUppgift
             }
         }
 
+
         #endregion
 
-
+        private void BtnAddGuardian_Click(object sender, EventArgs e)
+        {
+            pnlGuardian.Hide();
+        }
     }
 }

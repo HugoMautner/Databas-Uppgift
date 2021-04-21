@@ -75,13 +75,5 @@ namespace DatabasUppgift
 
 
         #endregion
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            StudentDefine sd = new StudentDefine();
-            sd.Tag = this;
-            sd.Show(this);
-            Hide();
-        }
     }
 }
