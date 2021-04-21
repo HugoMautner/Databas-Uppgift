@@ -80,14 +80,14 @@ namespace DatabasUppgift
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            new SqliteDataAccess().RemoveGuardian(id);
+            SqliteDataAccess.RemoveGuardian(id);
             MessageBox.Show("Guardian with ID " + id + "deleted", "Success", MessageBoxButtons.OK);
         }
 
         private void btn_SubmitChange_Click(object sender, EventArgs e)
         {
             GuardianModel guardian = new GuardianModel(id, tb_ChangeFirstName.Text, tb_ChangeLastName.Text, tb_ChangeAdress.Text, tb_ChangePhoneNumber.Text, tb_ChangeEpost.Text);
-            new SqliteDataAccess().ChangeGuardian(guardian);
+            SqliteDataAccess.ChangeGuardian(guardian);
         }
     }
 }

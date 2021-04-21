@@ -8,9 +8,9 @@ using System.Collections.Generic;
 
 namespace DatabasUppgift
 {
-    class SqliteDataAccess
+    static class SqliteDataAccess
     {
-        public void SaveStudent(StudentModel student)
+        public static void SaveStudent(StudentModel student)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -20,7 +20,7 @@ namespace DatabasUppgift
         }
 
 
-        public void RemoveStudent(int id)
+        public static void RemoveStudent(int id)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -29,7 +29,7 @@ namespace DatabasUppgift
             }
         }
 
-        public void RemoveGuardian(int id)
+        public static void RemoveGuardian(int id)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -38,7 +38,7 @@ namespace DatabasUppgift
             }
         }
 
-        public void ChangeStudent(StudentModel student)
+        public static void ChangeStudent(StudentModel student)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
@@ -48,7 +48,7 @@ namespace DatabasUppgift
             }
         }
 
-        public void ChangeGuardian(GuardianModel guardian)
+        public static void ChangeGuardian(GuardianModel guardian)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
