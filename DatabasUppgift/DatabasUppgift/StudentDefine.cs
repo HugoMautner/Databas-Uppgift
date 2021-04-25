@@ -34,7 +34,13 @@ namespace DatabasUppgift
             if (student != null)
             {
                 pnlOptions.Hide();
-                tbStudentInformation.Text = student.AllInfoText.Replace(" ", "\n");
+                tbStudentInformation.Text = student.AllInfoText;
+                
+                foreach (GuardianModel gm in SqliteDataAccess.GetGuardianRegistration(student))
+                {
+                    tbStudentInformation.AppendText(Environment.NewLine);
+                    tbStudentInformation.AppendText("Guardian: " + gm.FullName + " ");
+                }
             }
             else
             {

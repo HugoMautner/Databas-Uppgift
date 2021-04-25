@@ -125,9 +125,6 @@ namespace DatabasUppgift
             }
         }
 
-
-
-
         private static void RemoveGuardianRegistration(GuardianModel gm)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -143,6 +140,39 @@ namespace DatabasUppgift
             {
                 cnn.Execute("DELETE FROM registrations " +
                     "WHERE student_id = '" + sm.id + "'");
+            }
+        }
+
+
+
+
+
+        public static List<GuardianModel> GetGuardianRegistration(StudentModel sm)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var result = cnn.Query<GuardianModel>(
+                    "SELECT guardians.* " +
+                    "FROM guardians " +
+                    "INNER JOIN registrations " +
+                    "ON guardians.id = registrations.guardian_id " +
+                    "WHERE registrations.student_id = '" + sm.id + "'", new DynamicParameters());
+
+                return result.ToList();;
+            }
+        }
+
+
+
+
+        public static List<GuardianModel> LoadGuardans()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var result = cnn.Query<GuardianModel>(
+                    "SELECT * FROM guardians", new DynamicParameters());
+
+                return result.ToList();
             }
         }
 

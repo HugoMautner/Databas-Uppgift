@@ -43,7 +43,10 @@ namespace DatabasUppgift
         {
             get
             {
-                return id + " " + first_name + " " + last_name + " " + adress + " " + phone_number + " " + e_mail;
+                return id + " " + first_name + " " + last_name + 
+                    Environment.NewLine + adress + 
+                    Environment.NewLine + phone_number + 
+                    Environment.NewLine + e_mail;
             }
         }
 

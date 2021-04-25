@@ -390,7 +390,7 @@
             // 
             // pnlOptions
             // 
-            this.pnlOptions.Location = new System.Drawing.Point(62, 177);
+            this.pnlOptions.Location = new System.Drawing.Point(51, 177);
             this.pnlOptions.Margin = new System.Windows.Forms.Padding(4);
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.Size = new System.Drawing.Size(353, 187);
