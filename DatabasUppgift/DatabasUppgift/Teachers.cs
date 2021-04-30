@@ -54,8 +54,6 @@ namespace DatabasUppgift
             foreach (TeacherModel t in teachers)
                 lBoxTeachers.Items.Add(t.NameAndId);
         }
-
         #endregion
-
     }
 }
