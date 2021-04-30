@@ -35,6 +35,15 @@ namespace DatabasUppgift
                     "VALUES (@reg_number, @student_id, @guardian_id)", student);
             }
         }
+        public static void SaveTeacher(TeacherModel teacher)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("INSERT INTO teachers (first_name, last_name, adress, phone_number, e_mail) " +
+                    "VALUES (@first_name, @last_name, @adress, @phone_number, @e_mail)", teacher);
+            }
+        }
+
 
         public static void RemoveStudent(int id)
         {
@@ -112,9 +121,18 @@ namespace DatabasUppgift
                 return result.ToList();
             }
         }
+        public static List<TeacherModel> LoadTeachers()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var result = cnn.Query<TeacherModel>(
+                    "SELECT * FROM teachers", new DynamicParameters());
+
+                return result.ToList();
+            }
+        }
 
 
-        
 
         public static void SaveGuardianRegistration(GuardianRegistration gr)
         {

@@ -183,7 +183,7 @@
             // 
             // pnlOptions
             // 
-            this.pnlOptions.Location = new System.Drawing.Point(575, 334);
+            this.pnlOptions.Location = new System.Drawing.Point(575, 353);
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.Size = new System.Drawing.Size(297, 126);
             this.pnlOptions.TabIndex = 37;

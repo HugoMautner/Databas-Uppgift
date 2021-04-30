@@ -43,7 +43,11 @@
             this.lblTelenr = new System.Windows.Forms.Label();
             this.lblAdress = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
+            this.gBoxTeachers = new System.Windows.Forms.GroupBox();
+            this.lBoxTeachers = new System.Windows.Forms.ListBox();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.gBoxAddTeacher.SuspendLayout();
+            this.gBoxTeachers.SuspendLayout();
             this.SuspendLayout();
             // 
             // Title
@@ -93,7 +97,7 @@
             this.gBoxAddTeacher.Controls.Add(this.lblTelenr);
             this.gBoxAddTeacher.Controls.Add(this.lblAdress);
             this.gBoxAddTeacher.Controls.Add(this.lblFirstName);
-            this.gBoxAddTeacher.Location = new System.Drawing.Point(1033, 172);
+            this.gBoxAddTeacher.Location = new System.Drawing.Point(516, 175);
             this.gBoxAddTeacher.Name = "gBoxAddTeacher";
             this.gBoxAddTeacher.Size = new System.Drawing.Size(282, 219);
             this.gBoxAddTeacher.TabIndex = 29;
@@ -115,6 +119,7 @@
             this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblLastName
             // 
@@ -189,11 +194,41 @@
             this.lblFirstName.TabIndex = 0;
             this.lblFirstName.Text = "First Name";
             // 
+            // gBoxTeachers
+            // 
+            this.gBoxTeachers.Controls.Add(this.lBoxTeachers);
+            this.gBoxTeachers.Controls.Add(this.btnLoad);
+            this.gBoxTeachers.Location = new System.Drawing.Point(70, 175);
+            this.gBoxTeachers.Name = "gBoxTeachers";
+            this.gBoxTeachers.Size = new System.Drawing.Size(282, 611);
+            this.gBoxTeachers.TabIndex = 12;
+            this.gBoxTeachers.TabStop = false;
+            this.gBoxTeachers.Text = "Teachers";
+            // 
+            // lBoxTeachers
+            // 
+            this.lBoxTeachers.FormattingEnabled = true;
+            this.lBoxTeachers.Location = new System.Drawing.Point(6, 30);
+            this.lBoxTeachers.Name = "lBoxTeachers";
+            this.lBoxTeachers.Size = new System.Drawing.Size(270, 537);
+            this.lBoxTeachers.TabIndex = 11;
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(181, 577);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(95, 28);
+            this.btnLoad.TabIndex = 10;
+            this.btnLoad.Text = "Load teachers";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
             // Teachers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1419, 845);
+            this.Controls.Add(this.gBoxTeachers);
             this.Controls.Add(this.gBoxAddTeacher);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.lblPage);
@@ -203,6 +238,7 @@
             this.Text = "Teachers";
             this.gBoxAddTeacher.ResumeLayout(false);
             this.gBoxAddTeacher.PerformLayout();
+            this.gBoxTeachers.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +261,8 @@
         private System.Windows.Forms.Label lblTelenr;
         private System.Windows.Forms.Label lblAdress;
         private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.GroupBox gBoxTeachers;
+        private System.Windows.Forms.ListBox lBoxTeachers;
+        private System.Windows.Forms.Button btnLoad;
     }
 }
