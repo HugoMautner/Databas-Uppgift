@@ -54,7 +54,6 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnChange = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pnlNewDetails = new System.Windows.Forms.Panel();
             this.tb_ChangeLastName = new System.Windows.Forms.TextBox();
             this.btn_SubmitChange = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,6 +65,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pnlNewDetails = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tb_DisplayGuardian = new System.Windows.Forms.TextBox();
             this.gBoxAddGuardian.SuspendLayout();
@@ -144,6 +144,7 @@
             this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblLastName
             // 
@@ -332,13 +333,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter new guardian details";
             // 
-            // pnlNewDetails
-            // 
-            this.pnlNewDetails.Location = new System.Drawing.Point(927, 464);
-            this.pnlNewDetails.Name = "pnlNewDetails";
-            this.pnlNewDetails.Size = new System.Drawing.Size(298, 235);
-            this.pnlNewDetails.TabIndex = 10;
-            // 
             // tb_ChangeLastName
             // 
             this.tb_ChangeLastName.Location = new System.Drawing.Point(106, 61);
@@ -428,6 +422,13 @@
             this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "First Name";
+            // 
+            // pnlNewDetails
+            // 
+            this.pnlNewDetails.Location = new System.Drawing.Point(927, 469);
+            this.pnlNewDetails.Name = "pnlNewDetails";
+            this.pnlNewDetails.Size = new System.Drawing.Size(298, 235);
+            this.pnlNewDetails.TabIndex = 10;
             // 
             // groupBox2
             // 

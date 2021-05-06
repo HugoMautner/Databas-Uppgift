@@ -43,6 +43,22 @@ namespace DatabasUppgift
                     "VALUES (@first_name, @last_name, @adress, @phone_number, @e_mail)", teacher);
             }
         }
+        public static void SaveClass(ClassModel c)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("INSERT INTO classes (name, teacher_id) " +
+                    "VALUES (@name, @teacher_id)", c);
+            }
+        }
+        public static void SaveCourse(CourseModel c)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("INSERT INTO courses (name, teacher_id) " +
+                    "VALUES (@name, @teacher_id)", c);
+            }
+        }
 
 
         public static void RemoveStudent(int id)
@@ -68,6 +84,23 @@ namespace DatabasUppgift
             {
                 cnn.Execute("DELETE FROM guardians " +
                     "WHERE id = '" + gm.id + "'");
+            }
+        }
+
+        public static void RemoveClass(string name)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("DELETE FROM classes " +
+                    "WHERE name = '" + name + "'");
+            }
+        }
+        public static void RemoveCourse(string name)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("DELETE FROM courses " +
+                    "WHERE name = '" + name + "'");
             }
         }
 
@@ -117,6 +150,16 @@ namespace DatabasUppgift
             {
                 var result = cnn.Query<ClassModel>(
                     "SELECT * FROM classes", new DynamicParameters());
+
+                return result.ToList();
+            }
+        }
+        public static List<CourseModel> LoadCourses()
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                var result = cnn.Query<CourseModel>(
+                    "SELECT * FROM courses", new DynamicParameters());
 
                 return result.ToList();
             }

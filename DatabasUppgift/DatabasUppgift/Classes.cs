@@ -39,7 +39,7 @@ namespace DatabasUppgift
 
             var classes = SqliteDataAccess.LoadClasses();
             foreach (ClassModel c in classes)
-                lBoxClasses.Items.Add(c.ToString());
+                lBoxClasses.Items.Add(c.name);
         }
 
         private void btnSubmitFind_Click(object sender, EventArgs e)
@@ -51,10 +51,10 @@ namespace DatabasUppgift
 
                 foreach (ClassModel cm in classes)
                 {
-                    if (name == cm.ToString())
+                    if (name == cm.name)
                     {
-                        MessageBox.Show("Found " + cm, "Found class!", MessageBoxButtons.OK);
-                        tb_DisplayClass.Text = cm.ToString();
+                        MessageBox.Show("Found " + cm.name, "Found class!", MessageBoxButtons.OK);
+                        tb_DisplayClass.Text = cm.name;
                         pnlOptions.Hide();
                         return;
                     }
@@ -69,6 +69,36 @@ namespace DatabasUppgift
 
             MessageBox.Show("Class not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             tBoxID.Clear();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            SqliteDataAccess.RemoveClass(name);
+            MessageBox.Show("Class with name " + name + " deleted", "Success", MessageBoxButtons.OK);
+            pnlOptions.Show();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            var classes = SqliteDataAccess.LoadClasses();
+            foreach (ClassModel cm in classes)
+            {
+                if (tb_Name.Text == cm.name)
+                {
+                    MessageBox.Show("There is already a class with that name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            if (tb_Name.Text == "")
+            {
+                MessageBox.Show("Please enter a name for the class", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            ClassModel c = new ClassModel(tb_Name.Text, 0);
+            SqliteDataAccess.SaveClass(c);
+
+            LoadClasses();
         }
     }
 }

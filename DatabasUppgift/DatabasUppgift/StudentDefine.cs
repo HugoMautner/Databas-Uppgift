@@ -122,6 +122,12 @@ namespace DatabasUppgift
                 tbGuardianId.Clear();
             }
         }
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            var home = (Home)Tag;
+            home.Show();
+            Close();
+        }
 
 
         #region Help Methods
@@ -224,5 +230,6 @@ namespace DatabasUppgift
         {
             pnlGuardian.Hide();
         }
+
     }
 }

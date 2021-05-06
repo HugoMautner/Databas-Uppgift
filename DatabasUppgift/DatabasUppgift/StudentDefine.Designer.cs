@@ -65,6 +65,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tbStudentInformation = new System.Windows.Forms.TextBox();
             this.pnlGuardian = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.gBoxChange.SuspendLayout();
             this.gBoxRemove.SuspendLayout();
             this.gbStudents.SuspendLayout();
@@ -77,7 +78,7 @@
             // pnlChange
             // 
             this.pnlChange.Location = new System.Drawing.Point(326, 318);
-            this.pnlChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlChange.Margin = new System.Windows.Forms.Padding(2);
             this.pnlChange.Name = "pnlChange";
             this.pnlChange.Size = new System.Drawing.Size(317, 232);
             this.pnlChange.TabIndex = 36;
@@ -398,7 +399,7 @@
             // tbStudentInformation
             // 
             this.tbStudentInformation.Location = new System.Drawing.Point(368, 28);
-            this.tbStudentInformation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStudentInformation.Margin = new System.Windows.Forms.Padding(2);
             this.tbStudentInformation.Multiline = true;
             this.tbStudentInformation.Name = "tbStudentInformation";
             this.tbStudentInformation.Size = new System.Drawing.Size(276, 261);
@@ -407,16 +408,28 @@
             // pnlGuardian
             // 
             this.pnlGuardian.Location = new System.Drawing.Point(38, 310);
-            this.pnlGuardian.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlGuardian.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGuardian.Name = "pnlGuardian";
             this.pnlGuardian.Size = new System.Drawing.Size(282, 130);
             this.pnlGuardian.TabIndex = 0;
+            // 
+            // btnHome
+            // 
+            this.btnHome.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Location = new System.Drawing.Point(930, 631);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(171, 47);
+            this.btnHome.TabIndex = 45;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // StudentDefine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1113, 690);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.pnlGuardian);
             this.Controls.Add(this.tbStudentInformation);
             this.Controls.Add(this.groupBox1);
@@ -433,8 +446,9 @@
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.gBoxRemove);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentDefine";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.gBoxChange.ResumeLayout(false);
             this.gBoxChange.PerformLayout();
@@ -490,5 +504,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbStudentInformation;
         private System.Windows.Forms.Panel pnlGuardian;
+        private System.Windows.Forms.Button btnHome;
     }
 }
