@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace DatabasUppgift
 {
-    class ClassModel
+    class CourseModel
     {
         public string name { get; private set; }
         public int teacher_id { get; private set; }
 
-        public ClassModel(string name, int teacher_id)
+        public CourseModel(string name, int teacher_id)
         {
             this.name = name;
             this.teacher_id = teacher_id;
         }
-        public ClassModel()
+        public CourseModel()
         {
 
         }

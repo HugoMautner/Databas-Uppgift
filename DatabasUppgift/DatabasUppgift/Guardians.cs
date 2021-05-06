@@ -82,12 +82,31 @@ namespace DatabasUppgift
         {
             SqliteDataAccess.RemoveGuardian(id);
             MessageBox.Show("Guardian with ID " + id + "deleted", "Success", MessageBoxButtons.OK);
+            pnlOptions.Show();
         }
 
         private void btn_SubmitChange_Click(object sender, EventArgs e)
         {
             GuardianModel guardian = new GuardianModel(id, tb_ChangeFirstName.Text, tb_ChangeLastName.Text, tb_ChangeAdress.Text, tb_ChangePhoneNumber.Text, tb_ChangeEpost.Text);
             SqliteDataAccess.ChangeGuardian(guardian);
+            MessageBox.Show("Guardian with ID " + id + "updated", "Success", MessageBoxButtons.OK);
+            pnlOptions.Show();
+            pnlNewDetails.Show();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (tBoxFirstName.Text == "" || tBoxLastName.Text == "")
+            {
+                MessageBox.Show("First Name and Last Name must be filled in", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            GuardianModel guardian = new GuardianModel(-1, tBoxFirstName.Text,
+                tBoxLastName.Text, tBoxAdress.Text, tBoxTelenr.Text, tBoxEpost.Text);
+            SqliteDataAccess.SaveGuardian(guardian);
+
+            LoadGuardians();
         }
     }
 }
